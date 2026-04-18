@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Astro's Canine Rescue – rescuing, rehabilitating and rehoming neglected and abused dogs in Table View, Cape Town." />
+    <title>Home | Astro's Canine Rescue</title>
+    <!-- Links for font's, icons and styles sheets are below -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+  <body>
+
+    
+    <!-- ===== Header and the Nav bar ===== -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo" aria-label="Astro's Canine Rescue – Home">
+          <img src="images/logo.png" alt="Astro's Canine Rescue logo" width="120" height="100" />
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Available Dogs</a></li>
+            <li><a href="enquiry.html">Volunteer</a></li>
+            <li><a href="donate.html" class="nav-donate">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===== Main Content ===== -->
+    <main id="main-content">
+
+      <!-- Hero Section -->
+      <section class="hero" aria-label="Hero banner">
+        <div class="hero-image">
+          <img src="images/heroImage.jpg" alt="A rescued dog looking hopefully at the camera" width="1400" height="600" />
+        </div>
+        <div class="hero-content container">
+          <h1>Give a Dog a Second Chance</h1>
+          <p class="hero-subtext">
+            Every dog deserves a loving home. Astro's Canine Rescue rescues, rehabilitates
+            and rehomes neglected and abused dogs across Table View, Cape Town.
+          </p>
+          <div class="hero-actions">
+            <a href="services.html" class="btn btn-primary">Adopt Now</a>
+            <a href="donate.html" class="btn btn-secondary">Donate</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Dog Section -->
+      <section class="featured-dogs" aria-labelledby="featured-heading">
+        <div class="container">
+          <h2 id="featured-heading">Featured Dogs Available for Adoption</h2>
+          <p class="section-subtext">Meet some of our dogs who are looking for their forever homes.</p>
+
+          <ul class="dog-grid" role="list">
+
+            <!-- Dog Card 1 -->
+            <li class="dog-card">
+              <img src="images/baptist-standaert-mx0DEnfYxic-unsplash.jpg" alt="Max, a 2 year old male Border Collie" width="200" height="250" />
+              <div class="dog-card-body">
+                <h3>Max</h3>
+                <p><strong>Age:</strong> 2 years &nbsp;|&nbsp; <strong>Breed:</strong> Border Collie</p>
+                <p>Max is a great ball of energy and loves long walks on the beach.</p>
+                <a href="services.html#max" class="btn btn-outline">Learn More</a>
+              </div>
+            </li>
+
+            <!-- Dog Card 2 -->
+            <li class="dog-card">
+              <img src="images/alvan-nee-8g0D8ZfFXyA-unsplash.jpg" alt="Trixie, a 4 year old female Scottish Terrier X Yorkie" width="200" height="250" />
+              <div class="dog-card-body">
+                <h3>Trixie</h3>
+                <p><strong>Age:</strong> 4 year &nbsp;|&nbsp; <strong>Breed:</strong> Scottish Terrier X Yorkie</p>
+                <p>Trixie is a perfect companion for someone with a calm and slow lifestyle. She loves to take afternoon naps in a sunny spot.</p>
+                <a href="services.html#trixie" class="btn btn-outline">Learn More</a>
+              </div>
+            </li>
+
+            <!-- Dog Card 3 -->
+            <li class="dog-card">
+              <img src="images/kinshuk-bose-pkgznCMKDXo-unsplash.jpg" alt="Diesel, a 7 year old male German Shepherd" width="200" height="250" />
+              <div class="dog-card-body">
+                <h3>Diesel</h3>
+                <p><strong>Age:</strong> 7 years &nbsp;|&nbsp; <strong>Breed:</strong> German Shepherd</p>
+                <p>Diesel is an older man that likes to sleep late and cuddle with his human.</p>
+                <a href="services.html#diesel" class="btn btn-outline">Learn More</a>
+              </div>
+            </li>
+
+          </ul>
+
+          <div class="section-cta">
+            <a href="services.html" class="btn btn-primary">View All Available Dogs</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Mission Statement -->
+      <section class="mission-section" aria-labelledby="mission-heading">
+        <div class="container">
+          <h2 id="mission-heading">Our Mission</h2>
+          <p>
+            The mission of Astro's Canine Rescue is to provide every rescued animal a second
+            chance at life by ensuring they receive compassionate care, rehabilitation and a
+            permanent loving home.
+          </p>
+          <a href="about.html" class="btn btn-outline">Learn More About Us</a>
+        </div>
+      </section>
+
+      <!-- Impact Stat Section -->
+      <section class="stats-section" aria-labelledby="stats-heading">
+        <div class="container">
+          <h2 id="stats-heading" class="visually-hidden">Our Impact in Numbers</h2>
+          <ul class="stats-grid" role="list">
+            <li class="stat-item">
+              <span class="stat-number">350+</span>
+              <span class="stat-label">Dogs Rescued</span>
+            </li>
+            <li class="stat-item">
+              <span class="stat-number">280+</span>
+              <span class="stat-label">Successful Adoptions</span>
+            </li>
+            <li class="stat-item">
+              <span class="stat-number">45+</span>
+              <span class="stat-label">Volunteers</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Call to action section -->
+      <section class="cta-section" aria-labelledby="cta-heading">
+        <div class="container">
+          <h2 id="cta-heading">Ready to Help?</h2>
+          <p>
+            Whether you adopt, volunteer or donate - every act of kindness transforms a life.
+            Join our community and help us give every dog a second chance.
+          </p>
+          <div class="cta-actions">
+            <a href="enquiry.html" class="btn btn-primary">Volunteer</a>
+            <a href="donate.html" class="btn btn-secondary">Donate</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" aria-label="Site footer">
+      <div class="container footer-inner">
+
+        <nav class="footer-nav" aria-label="Footer quick links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Available Dogs</a></li>
+            <li><a href="enquiry.html">Volunteer</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </nav>
+
+        <address class="footer-contact">
+          <h3>Contact</h3>
+          <p>
+            <a href="mailto:info@astrocanine.org">info@astrocanine.org</a><br />
+            <a href="tel:+27215551234">(021) 553-1234</a><br />
+            123 Blaauwberg Road, Table View, Cape Town, 7441 
+            OR 89 Janssens Avenue, Table View, Cape Town, 7441
+          </p>
+        </address>
+
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <ul class="social-links" role="list">
+            <li>
+              <a href="#" aria-label="Facebook">
+                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Twitter / X">
+                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Astro's Canine Rescue. All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- Connecting to JavaScript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
