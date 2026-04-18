@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact Astro's Canine Rescue in Table View, Cape Town. Get in touch, find us on the map or report a stray." />
+    <title>Contact | Astro's Canine Rescue</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Leaflet.js CSS for interactive map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  </head>
+  <body>
+
+
+    <!-- ===== Header and Nav ===== -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo" aria-label="Astro's Canine Rescue – Home">
+          <img src="images/logo.png" alt="Astro's Canine Rescue logo" width="120" height="100" />
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Available Dogs</a></li>
+            <li><a href="enquiry.html">Volunteer</a></li>
+            <li><a href="donate.html" class="nav-donate">Donate</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===== Main Content ===== -->
+    <main id="main-content">
+
+      <!-- Page Hero -->
+      <section class="page-hero" aria-labelledby="contact-hero-heading">
+        <div class="container">
+          <h1 id="contact-hero-heading">Get In Touch</h1>
+          <p class="hero-subtext">
+            We'd love to hear from you. Whether you have a question about adoption,
+            volunteering or just want to say hello - reach out!
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact Info and Form -->
+      <section class="contact-main" aria-labelledby="contact-form-heading">
+        <div class="container contact-layout">
+
+          <!-- Contact Info Column -->
+          <aside class="contact-info" aria-label="Shelter contact information">
+            <h2>Contact Info</h2>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              <div>
+                <h3>Phone</h3>
+                <a href="tel:+27215551234">(021) 555-1234</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <div>
+                <h3>Email</h3>
+                <a href="mailto:info@astrocanine.org">info@astrocanine.org</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              <div>
+                <h3>Address</h3>
+                <address>
+                  123 Blaauwberg Road<br/>
+                  Table View <br/>
+                  Cape Town, 7441 <br /> 
+                  OR <br />
+                  89 Janssens Avenue <br/>
+                  Table View <br/>
+                  Cape Town, 7441 <br/>
+                </address>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <br/>  <!-- Place holder for now till CSS done -->
+              <i class="fa-regular fa-clock" aria-hidden="true"></i>
+              <div>
+                <h3>Hours</h3>
+                <p>
+                  Mon–Fri: 9am – 5pm<br />
+                  Sat: 10am – 4pm<br />
+                  Sun: Closed
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-social">
+              <h3>Follow Us</h3>
+              <ul class="social-links" role="list">
+                <li>
+                  <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Twitter / X">
+                    <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+
+          <!-- Contact Form Column -->
+          <div class="contact-form-wrapper">
+            <h2 id="contact-form-heading">Send Us a Message</h2>
+            <p>All fields marked with <abbr title="required">*</abbr> are required.</p>
+
+            <form id="contact-form" action="#" method="post" novalidate>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-first-name">First Name <abbr title="required">*</abbr></label>
+                  <input
+                    type="text"
+                    id="contact-first-name"
+                    name="first-name"
+                    placeholder="First name"
+                    required
+                    autocomplete="given-name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="contact-last-name">Last Name <abbr title="required">*</abbr></label>
+                  <input
+                    type="text"
+                    id="contact-last-name"
+                    name="last-name"
+                    placeholder="Last name"
+                    required
+                    autocomplete="family-name"
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-email">Email <abbr title="required">*</abbr></label>
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    placeholder="Email address"
+                    required
+                    autocomplete="email"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="contact-phone">Phone</label>
+                  <input
+                    type="tel"
+                    id="contact-phone"
+                    name="phone"
+                    placeholder="Phone number"
+                    autocomplete="tel"
+                    pattern="[0-9\s\+\-]{10,15}"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Subject <abbr title="required">*</abbr></label>
+                <select id="contact-subject" name="subject" required>
+                  <option value="" disabled selected>Select topic ▼</option>
+                  <option value="adoption">Adoption Enquiry</option>
+                  <option value="volunteer">Volunteering</option>
+                  <option value="donation">Donation / Sponsorship</option>
+                  <option value="foster">Foster Care</option>
+                  <option value="stray">Found a Stray</option>
+                  <option value="general">General Enquiry</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message <abbr title="required">*</abbr></label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows="6"
+                  placeholder="Your message here..."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-submit">
+                <button type="submit" class="btn btn-primary">Send Message</button>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Interactive Map - to be done in part 3-->
+      <section class="map-section" aria-labelledby="map-heading">
+        <div class="container">
+          <h2 id="map-heading">Find Us</h2>
+          <div
+            id="shelter-map"
+            class="map-container"
+            role="application"
+            aria-label="Interactive map showing the location of Astro's Canine Rescue at 123 Rescue Lane, Table View, Cape Town"
+            style="height: 450px;"
+          >
+            <!-- Leaflet.js map is initialised by js/script.js -->
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- Frequently Asked Questions -->
+      <section class="faq-section" aria-labelledby="contact-faq-heading">
+        <div class="container">
+          <h2 id="contact-faq-heading">Frequently Asked Questions</h2>
+          <dl class="faq-list faq-two-col">
+
+            <div class="faq-item">
+              <dt>
+                <button type="button" class="faq-toggle" aria-expanded="false" aria-controls="cfaq-1-answer">
+                  Can I visit the dogs?
+                  <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                </button>
+              </dt>
+              <dd id="cfaq-1-answer" hidden>
+                <p>
+                  Yes! We welcome shelter visits during our opening hours. Please contact us
+                  in advance so we can arrange a guided introduction with our team.
+                </p>
+              </dd>
+            </div>
+
+            <div class="faq-item">
+              <dt>
+                <button type="button" class="faq-toggle" aria-expanded="false" aria-controls="cfaq-2-answer">
+                  How do I start the adoption process?
+                  <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                </button>
+              </dt>
+              <dd id="cfaq-2-answer" hidden>
+                <p>
+                  Browse our available dogs on the <a href="services.html">Available Dogs</a>
+                  page, then submit an enquiry using the contact form above. Our team will be
+                  in touch within 48 hours.
+                </p>
+              </dd>
+            </div>
+
+            <div class="faq-item">
+              <dt>
+                <button type="button" class="faq-toggle" aria-expanded="false" aria-controls="cfaq-3-answer">
+                  Do you accept volunteers?
+                  <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                </button>
+              </dt>
+              <dd id="cfaq-3-answer" hidden>
+                <p>
+                  Absolutely! We are always looking for passionate volunteers. Visit our
+                  <a href="enquiry.html">Volunteer</a> page to learn more and apply.
+                </p>
+              </dd>
+            </div>
+
+            <div class="faq-item">
+              <dt>
+                <button type="button" class="faq-toggle" aria-expanded="false" aria-controls="cfaq-4-answer">
+                  What donation items do you need?
+                  <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                </button>
+              </dt>
+              <dd id="cfaq-4-answer" hidden>
+                <p>
+                  We are always in need of dog food, blankets, toys, leashes and medical
+                  supplies. Visit our <a href="donate.html">Donate</a> page for the full wish
+                  list and drop-off details.
+                </p>
+              </dd>
+            </div>
+
+          </dl>
+        </div>
+      </section>
+
+      <!-- Emergency / Found a Stray -->
+      <section class="emergency-section" aria-labelledby="emergency-heading">
+        <div class="container">
+          <h2 id="emergency-heading">Found a Stray?</h2>
+          <p>Emergency hotline for stray or injured dogs — available 24 hours a day.</p>
+          <a href="tel:+27215559364" class="btn btn-danger">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            Call: (021) 555-1234
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer" aria-label="Site footer">
+      <div class="container footer-inner">
+
+        <nav class="footer-nav" aria-label="Footer quick links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Available Dogs</a></li>
+            <li><a href="enquiry.html">Volunteer</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </nav>
+
+        <address class="footer-contact">
+          <h3>Contact</h3>
+          <p>
+            <a href="mailto:info@astrocanine.org">info@astrocanine.org</a><br />
+            <a href="tel:+27215551234">(021) 555-1234</a><br />
+            1123 Blaauwberg Road, Table View, Cape Town, 7441 
+            OR 89 Janssens Avenue, Table View, Cape Town, 7441
+          </p>
+        </address>
+
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <ul class="social-links" role="list">
+            <li>
+              <a href="#" aria-label="Facebook">
+                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Twitter / X">
+                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Astro's Canine Rescue. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Leaflet.js for interactive map -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN/WLEo=" crossorigin=""></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
