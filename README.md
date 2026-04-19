@@ -71,7 +71,7 @@ astroswebsite/
 ├── js/
 │   └── script.js         # Main JavaScript file (implemented in Part 3)
 └── images/
-    ├── volunteer/
+    ├── volunteers/
     |   ├── tadeusz-lakota-tk5LWGNiWVs-unsplash.jpg
     |   ├── thamara-maura-wA-6Tsv2_Fc-unsplash.jpg 
     |   └── james-mcdermott-_fuZknh-yFg-unsplash.jpg
