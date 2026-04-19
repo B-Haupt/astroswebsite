@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Browse dogs available for adoption at Astro's Canine Rescue in Table View, Cape Town. Filter by age, size and breed." />
+    <title>Available Dogs | Astro's Canine Rescue</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+  <body>
+
+
+    <!-- ===== Header and Nav ===== -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo" aria-label="Astro's Canine Rescue – Home">
+          <img src="images/logo.png" alt="Astro's Canine Rescue logo" width="120" height="100" />
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html" aria-current="page">Available Dogs</a></li>
+            <li><a href="enquiry.html">Volunteer</a></li>
+            <li><a href="donate.html" class="nav-donate">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===== Main Content ===== -->
+    <main id="main-content">
+
+      <!-- Page Hero -->
+      <section class="page-hero" aria-labelledby="dogs-hero-heading">
+        <div class="container">
+          <h1 id="dogs-hero-heading">Available Dogs for Adoption</h1>
+          <p class="hero-subtext">Find your new best friend - browse all our dogs currently looking for a forever home.</p>
+        </div>
+      </section>
+
+      <!-- Search & Filter -->
+      <section class="filter-section" aria-labelledby="filter-heading">
+        <div class="container">
+          <h2 id="filter-heading" class="visually-hidden">Search and filter dogs</h2>
+          <div class="filter-bar" role="search">
+
+            <label for="search-name" class="visually-hidden">Search by name</label>
+            <input
+              type="search"
+              id="search-name"
+              name="search-name"
+              placeholder="Search by name..."
+              aria-label="Search dogs by name"
+            />
+
+            <label for="filter-age" class="visually-hidden">Filter by age</label>
+            <select id="filter-age" name="filter-age" aria-label="Filter by age">
+              <option value="">Filter: Age ▼</option>
+              <option value="puppy">Puppy (under 1 year)</option>
+              <option value="young">Young (1-3 years)</option>
+              <option value="adult">Adult (3-7 years)</option>
+              <option value="senior">Senior (7+ years)</option>
+            </select>
+
+            <label for="filter-size" class="visually-hidden">Filter by size</label>
+            <select id="filter-size" name="filter-size" aria-label="Filter by size">
+              <option value="">Filter: Size ▼</option>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+
+            <label for="filter-breed" class="visually-hidden">Filter by breed</label>
+            <select id="filter-breed" name="filter-breed" aria-label="Filter by breed">
+              <option value="">Filter: Breed ▼</option>
+              <option value="german-shepherd">German Shepherd Mix</option>
+              <option value="border-collie">Border Collie Mix</option>
+              <option value="golden-retriever">Golden Retriever Mix</option>
+              <option value="appenzeller-sennenhund">Appenzeller Sennenhund Mix</option>
+              <option value="husky">Husky Mix</option>
+              <option value="mixed">Mixed Breed</option>
+            </select>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Dog Listing -->
+      <section class="dog-listings" aria-labelledby="listings-heading">
+        <div class="container">
+          <h2 id="listings-heading" class="visually-hidden">Dog listings</h2>
+          <ul class="dog-grid" id="dog-listings-grid" role="list">
+
+            <!-- Dog 1 -->
+            <li class="dog-card" id="max" data-age="young" data-size="large" data-breed="border-collie">
+              <img src="images/baptist-standaert-mx0DEnfYxic-unsplash.jpg" alt="Max, a 2 year old male Border Collie" width="200" height="250" />
+              <div class="dog-card-body">
+                <h3>Max</h3>
+                <p><strong>Age:</strong> 2 years &nbsp;|&nbsp; <strong>Size:</strong> Large</p>
+                <p><strong>Breed:</strong> Border Collie</p>
+                <p>Max is a great ball of energy and loves long walks on the beach.</p>
+               <div class="dog-card-actions">
+                  <a href="contact.html#contact-form" class="btn btn-primary">Contact Us</a>
+                  <button type="button" class="btn-favourite" aria-label="Add Max to favourites">
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </li>
+
+            <!-- Dog 2 -->
+            <li class="dog-card" id="trixie" data-age="adult" data-size="small" data-breed="mixed">
+              <img src="images/alvan-nee-8g0D8ZfFXyA-unsplash.jpg" alt="Trixie, a 4 year old female Scottish Terrier X Yorkie" width="200" height="250" />
+              <div class="dog-card-body">
+               <h3>Trixie</h3>
+                <p><strong>Age:</strong> 4 years &nbsp;|&nbsp; <strong>Size:</strong> Small</p>
+                <p><strong>Breed:</strong> Scottish Terrier</p>
+                <p>Trixie is a perfect companion for someone with a calm and slow lifestyle. She loves to take afternoon naps in a sunny spot.</p>
+               <div class="dog-card-actions">
+                  <a href="contact.html#contact-form" class="btn btn-primary">Contact Us</a>
+                  <button type="button" class="btn-favourite" aria-label="Add Trixie to favourites">
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </li>
+
+            <!-- Dog 3 -->
+            <li class="dog-card" id="diesel" data-age="senior" data-size="large" data-breed="german-shepherd">
+              <img src="images/kinshuk-bose-pkgznCMKDXo-unsplash.jpg" alt="Diesel, a 7-year-old male German Shepherd" width="200" height="250" />
+              <div class="dog-card-body">
+                <h3>Diesel</h3>
+                <p><strong>Age:</strong> 7 years &nbsp;|&nbsp; <strong>Size:</strong> Large</p>
+                <p><strong>Breed:</strong> German Shepherd </p>
+                <p>Diesel is an older man that likes to sleep late and cuddles with his human.</p>
+                <div class="dog-card-actions">
+                  <a href="contact.html#contact-form" class="btn btn-primary">Contact Us</a>
+                  <button type="button" class="btn-favourite" aria-label="Add Diesel to favourites">
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </li>
+
+            <!-- Dog 4 -->
+            <li class="dog-card" id="bella" data-age="adult" data-size="large" data-breed="husky">
+              <img src="images/ash-v0_MCllHY9M-unsplash.jpg" alt="Bella, a 4-year-old female Husky" width="200" height="250" />
+              <div class="dog-card-body">
+                <h3>Bella</h3>
+                <p><strong>Age:</strong> 4 years &nbsp;|&nbsp; <strong>Size:</strong> Large</p>
+                <p><strong>Breed:</strong> Husky</p>
+                <p>Bella is a loyal and loving girl who adores belly rubs and playtime in the garden.</p>
+                <div class="dog-card-actions">
+                  <a href="contact.html#contact-form" class="btn btn-primary">Contact Us</a>
+                  <button type="button" class="btn-favourite" aria-label="Add Bella to favourites">
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </li>
+
+            <!-- Dog 5 -->
+            <li class="dog-card" id="charlie" data-age="senior" data-size="large" data-breed="golden-retriever">
+              <img src="images/victor-g-x5oPmHmY3kQ-unsplash.jpg" alt="Charlie, a 9-year-old male Golden Retriever" width="200" height="250" />
+              <div class="dog-card-body">
+                <h3>Charlie</h3>
+                <p><strong>Age:</strong> 9 years &nbsp;|&nbsp; <strong>Size:</strong> Large</p>
+                <p><strong>Breed:</strong> Golden Retriever</p>
+                <p>Charlie is a gentle senior boy who is perfectly happy with slow walks and afternoon naps.</p>
+                <div class="dog-card-actions">
+                  <a href="contact.html#contact-form" class="btn btn-primary">Contact Us</a>
+                  <button type="button" class="btn-favourite" aria-label="Add Charlie to favourites">
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </li>
+
+            <!-- Dog 6 -->
+            <li class="dog-card" id="sky" data-age="young" data-size="medium" data-breed="appenzeller-sennenhund">
+              <img src="images/nathalie-ehrnleitner-SApQiu5GIdQ-unsplash.jpg" alt="Sky, a 2-year-old female  Appenzeller Sennenhund" width="200" height="250" />
+              <div class="dog-card-body">
+                <h3>Sky</h3>
+                <p><strong>Age:</strong> 2 years &nbsp;|&nbsp; <strong>Size:</strong> Medium</p>
+                <p><strong>Breed:</strong>  Appenzeller Sennenhund</p>
+                <p>Sky is an adventurous and intelligent girl who would love an active family.</p>
+                <div class="dog-card-actions">
+                  <a href="contact.html#contact-form" class="btn btn-primary">Contact Us</a>
+                  <button type="button" class="btn-favourite" aria-label="Add Sky to favourites">
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </li>
+
+             <!-- Dog 7 -->
+            <li class="dog-card" id="teddy" data-age="young" data-size="medium" data-breed="mixed">
+              <img src="images/brooke-cagle-Ntm4C2lCWxQ-unsplash.jpg" alt="Teddy, a 2-year-old male  Goldendoodle" width="200" height="250" />
+              <div class="dog-card-body">
+                <h3>Teddy</h3>
+                <p><strong>Age:</strong> 2 years &nbsp;|&nbsp; <strong>Size:</strong> Medium</p>
+                <p><strong>Breed:</strong>  Goldendoodle</p>
+                <p>Teddy loves long walks and playing fetch.</p>
+                <div class="dog-card-actions">
+                  <a href="contact.html#contact-form" class="btn btn-primary">Contact Us</a>
+                  <button type="button" class="btn-favourite" aria-label="Add Teddy to favourites">
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </li>
+
+            <!-- Dog 8 -->
+            <li class="dog-card" id="ghost" data-age="senior" data-size="large" data-breed="mixed">
+              <img src="images/cristofer-maximilian-5_nJw3UUgpQ-unsplash.jpg" alt="Ghost, a 9-year-old male Weimaraner" width="200" height="250" />
+              <div class="dog-card-body">
+                <h3>Ghost</h3>
+                <p><strong>Age:</strong> 9 years &nbsp;|&nbsp; <strong>Size:</strong> Large</p>
+                <p><strong>Breed:</strong> Weimaraner</p>
+                <p>Ghost is a active dog that loves long runs.</p>
+                <div class="dog-card-actions">
+                  <a href="contact.html#contact-form" class="btn btn-primary">Contact Us</a>
+                  <button type="button" class="btn-favourite" aria-label="Add Ghost to favourites">
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </li>
+
+            <!-- Dog 9 -->
+            <li class="dog-card" id="luke" data-age="adult" data-size="small" data-breed="mixed">
+              <img src="images/karsten-winegeart-Qb7D1xw28Co-unsplash.jpg" alt="Luke, a 4 year old female Shih Tzu" width="200" height="250" />
+              <div class="dog-card-body">
+               <h3>Luke</h3>
+                <p><strong>Age:</strong> 4 years &nbsp;|&nbsp; <strong>Size:</strong> Small</p>
+                <p><strong>Breed:</strong> Shih Tzu</p>
+                <p>Luke loves to play fetch and will do anything for a treat.</p>
+               <div class="dog-card-actions">
+                  <a href="contact.html#contact-form" class="btn btn-primary">Contact Us</a>
+                  <button type="button" class="btn-favourite" aria-label="Add Luke to favourites">
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </li>
+
+
+          </ul>
+
+          <!-- Pagination navigation - Will be implement with javascript later-->
+          <nav class="pagination" aria-label="Dog listings pagination">
+            <a href="#" class="btn btn-outline" aria-label="Previous page">&larr; Prev</a>
+            <a href="#" class="btn btn-outline" aria-label="Page 1" aria-current="page">1</a>
+            <a href="#" class="btn btn-outline" aria-label="Page 2">2</a>
+            <a href="#" class="btn btn-outline" aria-label="Page 3">3</a>
+            <a href="#" class="btn btn-outline" aria-label="Next page">Next &rarr;</a>
+          </nav>
+
+        </div>
+      </section>
+
+      <!-- Adoption Process -->
+      <section class="adoption-process" aria-labelledby="process-heading">
+        <div class="container">
+          <h2 id="process-heading">Adoption Process</h2>
+          <p class="section-subtext">We want to make sure every dog goes to the perfect home. Here is what to expect:</p>
+          <ol class="process-steps">
+            <li class="process-step">
+              <span class="step-number">1</span>
+              <i class="fa-solid fa-file-pen" aria-hidden="true"></i>
+              <h3>Apply</h3>
+              <p>Complete our online adoption enquiry form with your details and preferred dog.</p>
+            </li>
+            <li class="process-step">
+              <span class="step-number">2</span>
+              <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+              <h3>Meet &amp; Greet</h3>
+              <p>Come to the shelter to spend time with the dog and make sure it is the right fit.</p>
+            </li>
+            <li class="process-step">
+              <span class="step-number">3</span>
+              <i class="fa-solid fa-house" aria-hidden="true"></i>
+              <h3>Home Visit</h3>
+              <p>A volunteer will visit your home to ensure the environment is safe for the dog.</p>
+            </li>
+            <li class="process-step">
+              <span class="step-number">4</span>
+              <i class="fa-solid fa-dog" aria-hidden="true"></i>
+              <h3>Adopt</h3>
+              <p>Sign the adoption agreement, pay the adoption fee and take your new family member home!</p>
+            </li>
+          </ol>
+          <div class="section-cta">
+            <a href="contact.html#contact-form" class="btn btn-primary">Start Application</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Adoption FAQs -->
+      <section class="faq-section" aria-labelledby="faq-heading">
+        <div class="container">
+          <h2 id="faq-heading">Adoption FAQs</h2>
+          <dl class="faq-list">
+
+            <div class="faq-item">
+              <dt>
+                <button type="button" class="faq-toggle" aria-expanded="false" aria-controls="faq-1-answer">
+                  What are the adoption fees?
+                  <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                </button>
+              </dt>
+              <dd id="faq-1-answer" hidden>
+                <p>
+                  Our adoption fees range from R500 to R1 500 depending on the age and size of the
+                  dog. All fees go directly towards the care of the remaining animals at the shelter.
+                  Every adopted dog is vaccinated, sterilised, microchipped and dewormed.
+                </p>
+              </dd>
+            </div>
+
+            <div class="faq-item">
+              <dt>
+                <button type="button" class="faq-toggle" aria-expanded="false" aria-controls="faq-2-answer">
+                  What is included in the adoption?
+                  <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                </button>
+              </dt>
+              <dd id="faq-2-answer" hidden>
+                <p>
+                  Every adopted dog comes vaccinated, sterilised, microchipped, dewormed and
+                  with a basic starter pack including food, a collar and lead.
+                </p>
+              </dd>
+            </div>
+
+            <div class="faq-item">
+              <dt>
+                <button type="button" class="faq-toggle" aria-expanded="false" aria-controls="faq-3-answer">
+                  How long does the process take?
+                  <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                </button>
+              </dt>
+              <dd id="faq-3-answer" hidden>
+                <p>
+                  The process typically takes between 1 and 2 weeks from enquiry to adoption,
+                  depending on the availability of our volunteer team for the home visit.
+                </p>
+              </dd>
+            </div>
+
+            <div class="faq-item">
+              <dt>
+                <button type="button" class="faq-toggle" aria-expanded="false" aria-controls="faq-4-answer">
+                  Can I meet the dog before applying?
+                  <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                </button>
+              </dt>
+              <dd id="faq-4-answer" hidden>
+                <p>
+                  Yes! We encourage you to visit the shelter during our open hours before
+                  submitting an application. Meeting a dog in person is an important part of
+                  finding the right match.
+                </p>
+              </dd>
+            </div>
+
+          </dl>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer" aria-label="Site footer">
+      <div class="container footer-inner">
+
+        <nav class="footer-nav" aria-label="Footer quick links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Available Dogs</a></li>
+            <li><a href="enquiry.html">Volunteer</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </nav>
+
+        <address class="footer-contact">
+          <h3>Contact</h3>
+          <p>
+            <a href="mailto:info@astrocanine.org">info@astrocanine.org</a><br />
+            <a href="tel:+27215551234">(021) 555-1234</a><br />
+            123 Blaauwberg Road, Table View, Cape Town, 7441 
+            OR 89 Janssens Avenue, Table View, Cape Town, 7441
+          </p>
+        </address>
+
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <ul class="social-links" role="list">
+            <li>
+              <a href="#" aria-label="Facebook">
+                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Twitter / X">
+                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Astro's Canine Rescue. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
