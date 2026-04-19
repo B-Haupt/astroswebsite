@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Support Astro's Canine Rescue with a donation or in-kind contribution. Every rand helps save a life." />
+    <title>Donate | Astro's Canine Rescue</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+  <body>
+
+
+    <!-- ===== Header and Nav ===== -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo" aria-label="Astro's Canine Rescue – Home">
+          <img src="images/logo.png" alt="Astro's Canine Rescue logo" width="120" height="100" />
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Available Dogs</a></li>
+            <li><a href="enquiry.html".html">Volunteer</a></li>
+            <li><a href="donate.html" class="nav-donate" aria-current="page">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===== Main Content ===== -->
+    <main id="main-content">
+
+      <!-- Page Hero -->
+      <section class="page-hero" aria-labelledby="donate-hero-heading">
+        <div class="container">
+          <h1 id="donate-hero-heading">Support Our Mission</h1>
+          <p class="hero-subtext">
+            Every donation - big or small - helps us rescue, rehabilitate and rehome more
+            dogs in need. Every rand makes a difference.
+          </p>
+        </div>
+      </section>
+
+      <!-- Your Impact -->
+      <section class="impact-tiers" aria-labelledby="impact-tiers-heading">
+        <div class="container">
+          <h2 id="impact-tiers-heading">Your Impact</h2>
+          <ul class="tiers-grid" role="list">
+
+            <li class="tier-card">
+              <span class="tier-amount">R25</span>
+              <p>Feeds one dog for a day with nutritious meals.</p>
+            </li>
+
+            <li class="tier-card">
+              <span class="tier-amount">R50</span>
+              <p>Covers basic veterinary supplies for one dog for a week.</p>
+            </li>
+
+            <li class="tier-card">
+              <span class="tier-amount">R100</span>
+              <p>Pays for a vaccination that protects a dog for an entire year.</p>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+
+      <!-- Make a Donation Section -->
+      <section class="donation-form-section" aria-labelledby="donation-form-heading">
+        <div class="container">
+          <h2 id="donation-form-heading">Make a Donation</h2>
+          <p>All fields marked with <abbr title="required">*</abbr> are required.</p>
+
+          <form id="donation-form" action="#" method="post" novalidate>
+
+            <!-- Donation Type -->
+            <fieldset>
+              <legend>Donation Type <abbr title="required">*</abbr></legend>
+              <div class="radio-row">
+                <div class="form-check">
+                  <input type="radio" id="type-once" name="donation-type" value="one-time" checked />
+                  <label for="type-once">One-Time</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" id="type-monthly" name="donation-type" value="monthly" />
+                  <label for="type-monthly">Monthly</label>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Select Amount -->
+            <fieldset>
+              <legend>Select Amount <abbr title="required">*</abbr></legend>
+              <div class="amount-grid">
+                <div class="form-check">
+                  <input type="radio" id="amount-25" name="donation-amount" value="25" />
+                  <label for="amount-25">R25</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" id="amount-50" name="donation-amount" value="50" />
+                  <label for="amount-50">R50</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" id="amount-100" name="donation-amount" value="100" />
+                  <label for="amount-100">R100</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" id="amount-250" name="donation-amount" value="250" />
+                  <label for="amount-250">R250</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="custom-amount">Custom Amount (ZAR)</label>
+                <input
+                  type="number"
+                  id="custom-amount"
+                  name="custom-amount"
+                  placeholder="Enter custom amount"
+                  min="10"
+                  step="1"
+                />
+              </div>
+            </fieldset>
+
+            <!-- Donor Details -->
+            <fieldset>
+              <legend>Your Details</legend>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="donor-first-name">First Name <abbr title="required">*</abbr></label>
+                  <input
+                    type="text"
+                    id="donor-first-name"
+                    name="first-name"
+                    placeholder="Your first name"
+                    required
+                    autocomplete="given-name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="donor-last-name">Last Name <abbr title="required">*</abbr></label>
+                  <input
+                    type="text"
+                    id="donor-last-name"
+                    name="last-name"
+                    placeholder="Your last name"
+                    required
+                    autocomplete="family-name"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="donor-email">Email Address <abbr title="required">*</abbr></label>
+                <input
+                  type="email"
+                  id="donor-email"
+                  name="email"
+                  placeholder="yourname@example.com"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="donor-phone">Phone Number (Optional)</label>
+                <input
+                  type="tel"
+                  id="donor-phone"
+                  name="phone"
+                  placeholder="e.g. 071 234 5678"
+                  autocomplete="tel"
+                  pattern="[0-9\s\+\-]{10,15}"
+                />
+              </div>
+
+            </fieldset>
+
+            <!-- Payment Information -->
+            <fieldset>
+              <legend>Payment Information</legend>
+
+              <div class="form-group">
+                <label for="card-number">Card Number <abbr title="required">*</abbr></label>
+                <input
+                  type="text"
+                  id="card-number"
+                  name="card-number"
+                  placeholder="1234 5678 9012 3456"
+                  required
+                  maxlength="19"
+                  autocomplete="cc-number"
+                  inputmode="numeric"
+                />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="card-expiry">Expiry Date <abbr title="required">*</abbr></label>
+                  <input
+                    type="text"
+                    id="card-expiry"
+                    name="card-expiry"
+                    placeholder="MM/YY"
+                    required
+                    maxlength="5"
+                    autocomplete="cc-exp"
+                    inputmode="numeric"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="card-cvv">CVV <abbr title="required">*</abbr></label>
+                  <input
+                    type="text"
+                    id="card-cvv"
+                    name="card-cvv"
+                    placeholder="CVV"
+                    required
+                    maxlength="4"
+                    autocomplete="cc-csc"
+                    inputmode="numeric"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="card-zip">Billing Postal Code <abbr title="required">*</abbr></label>
+                  <input
+                    type="text"
+                    id="card-zip"
+                    name="card-zip"
+                    placeholder="Postal code"
+                    required
+                    maxlength="10"
+                    autocomplete="postal-code"
+                    inputmode="numeric"
+                  />
+                </div>
+              </div>
+
+              <div class="form-submit">
+                <button type="submit" class="btn btn-primary">Donate Now</button>
+              </div>
+
+              <p class="secure-note">
+                <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                Secure payment. Your details are encrypted and never stored.
+              </p>
+
+            </fieldset>
+
+          </form>
+
+          <!-- EFT Alternative -->
+          <aside class="eft-details" aria-labelledby="eft-heading">
+            <h3 id="eft-heading">Prefer to Pay via EFT?</h3>
+            <dl>
+              <dt>Bank</dt>
+              <dd>Standard Bank</dd>
+              <dt>Account Name</dt>
+              <dd>Astro's Canine Rescue NPC</dd>
+              <dt>Account Number</dt>
+              <dd>123 456 789</dd>
+              <dt>Branch Code</dt>
+              <dd>051001</dd>
+              <dt>Reference</dt>
+              <dd>DONATION – [Your Name]</dd>
+            </dl>
+            <p>Please email your proof of payment to <a href="mailto:info@astrocanine.org">info@astrocanine.org</a>.</p>
+          </aside>
+
+        </div>
+      </section>
+
+      <!-- Wish List -->
+      <section class="wishlist-section" aria-labelledby="wishlist-heading">
+        <div class="container">
+          <h2 id="wishlist-heading">Our Wish List</h2>
+          <p>
+            Can't donate money right now? We also welcome in-kind donations of supplies.
+            Below are items we always need:
+          </p>
+          <ul class="wishlist-grid" role="list">
+            <li>
+              <i class="fa-solid fa-bowl-food" aria-hidden="true"></i>
+              Dog Food &amp; Treats
+            </li>
+            <li>
+              <i class="fa-solid fa-bed" aria-hidden="true"></i>
+              Blankets &amp; Beds
+            </li>
+            <li>
+              <i class="fa-solid fa-tag" aria-hidden="true"></i>
+              Leashes &amp; Collars
+            </li>
+            <li>
+              <i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i>
+              Toys &amp; Enrichment
+            </li>
+            <li>
+              <i class="fa-solid fa-spray-can-sparkles" aria-hidden="true"></i>
+              Cleaning Supplies
+            </li>
+            <li>
+              <i class="fa-solid fa-syringe" aria-hidden="true"></i>
+              Medical Supplies
+            </li>
+          </ul>
+          <p class="tax-note">
+            Tax-deductible &nbsp;|&nbsp; Section 18A &nbsp;|&nbsp; NPO Number: 123-456 NPO
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer" aria-label="Site footer">
+      <div class="container footer-inner">
+
+        <nav class="footer-nav" aria-label="Footer quick links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Available Dogs</a></li>
+            <li><a href="enquiry.html">Volunteer</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </nav>
+
+        <address class="footer-contact">
+          <h3>Contact</h3>
+          <p>
+            <a href="mailto:info@astrocanine.org">info@astrocanine.org</a><br />
+            <a href="tel:+27215551234">(021) 555-1234</a><br />
+            123 Blaauwberg Road, Table View, Cape Town, 7441 
+            OR 89 Janssens Avenue, Table View, Cape Town, 7441
+          </p>
+        </address>
+
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <ul class="social-links" role="list">
+            <li>
+              <a href="#" aria-label="Facebook">
+                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Twitter / X">
+                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Astro's Canine Rescue. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
