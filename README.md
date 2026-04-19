@@ -30,7 +30,7 @@ This repository contains the source code for the **Astro's Canine Rescue** websi
 | 6 fully structured HTML pages | Part 1 |
 | Semantic HTML5 layout (header, nav, main, footer) | Part 1 |
 | Navigation linking all 6 pages | Part 1 |
-| Enquiry form (volunteer / sponsor / adoption) | Part 1 (HTML structure) |
+| Enquiry form (volunteer) | Part 1 (HTML structure) |
 | Contact form with general messaging | Part 1 (HTML structure) |
 | Two embedded shelter location maps | Part 1  |
 
