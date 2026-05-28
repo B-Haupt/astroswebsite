@@ -33,7 +33,6 @@ This repository contains the source code for the **Astro's Canine Rescue** websi
 | Enquiry form (volunteer / sponsor / adoption) | Part 1 (HTML structure) |
 | Contact form with general messaging | Part 1 (HTML structure) |
 | Two embedded shelter location maps | Part 1  |
-
 | External CSS stylesheet | Part 2 |
 | Responsive design (mobile & tablet) | Part 2 |
 | External CSS stylesheet linked to all pages | Part 2 |
@@ -47,8 +46,6 @@ This repository contains the source code for the **Astro's Canine Rescue** websi
 | Responsive Design - tablet breakpoint (max-width: 900px)| Part 2 |
 | Responsive Design - mobile breakpoint (max-width: 600px)| Part 2 |
 | Responsive layout, typography, navigation and image adjustment| Part 2 |
-
-
 | JavaScript form validation |  Part 3 |
 | Lightbox image gallery |  Part 3 |
 | Animal filter / search |  Part 3 |
