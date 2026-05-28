@@ -240,7 +240,7 @@ A hamburger toggle menu will be implemented in Part 3 using JavaScript, as noted
 #### Sticky Navigation
 - Applied `position: sticky; top: 0; z-index: 100` to `.site-header` so the navigation bar remains fixed at the top of the viewport as the user scrolls.
 
-#### Responsive Design — Tablet (max-width: 900px)
+#### Responsive Design: Tablet (max-width: 900px)
 - Typography scaled down for h1–h3.
 - Dog grid, team grid, values grid, tiers grid, stories grid reduced from 3-4 columns to 2 columns.
 - Impact grid reduced to 2-column.
@@ -252,7 +252,7 @@ A hamburger toggle menu will be implemented in Part 3 using JavaScript, as noted
 - FAQ two-column layout collapsed to single column.
 - Volunteer requirements list collapsed to single column.
 
-#### Responsive Design — Mobile (max-width: 600px)
+#### Responsive Design: Mobile (max-width: 600px)
 - All multi-column grids collapsed to single column (dog grid, values, benefits, tiers, stories, partners, stats, process steps).
 - Team grid retained as 2-column (compact portrait cards).
 - Impact grid retained as 2-column.
