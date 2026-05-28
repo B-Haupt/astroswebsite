@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>" />
   </head>
   <body>
 
@@ -17,8 +18,9 @@
     <!-- ===== Header and Nav ===== -->
     <header class="site-header">
       <div class="container header-inner">
-        <a href="index.html" class="logo" aria-label="Astro's Canine Rescue – Home">
-          <img src="images/logo.png" alt="Astro's Canine Rescue logo" width="120" height="100" />
+       <a href="index.html" class="logo" aria-label="Astro's Canine Rescue – Home">
+        <img src="images/logo.png" alt="Astro's Canine Rescue logo" width="120" height="100" />
+        <span class="logo-name">Astro's Canine Rescue</span>
         </a>
         <nav class="main-nav" aria-label="Main navigation">
           <ul>
@@ -26,7 +28,7 @@
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Available Dogs</a></li>
             <li><a href="enquiry.html" aria-current="page">Volunteer</a></li>
-            <li><a href="donate.html" class="nav-donate">Donate</a></li>
+            <li><a href="donate.html">Donate</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
@@ -321,7 +323,10 @@
           <h2 id="stories-heading">Volunteer Stories</h2>
           <ul class="stories-grid" role="list">
             <li class="story-card">
-              <img src="images/volunteers/thamara-maura-wA-6Tsv2_Fc-unsplash.jpg" alt="Amy, Dog Walker volunteer" width="150" height="200" />
+              <img src="images/volunteers/thamara-maura-wA-6Tsv2_Fc-unsplash.jpg"
+                    srcset="images/volunteers/thamara-maura-wA-6Tsv2_Fc-unsplash.jpg 800w,
+                            images/volunteers/thamara-maura-wA-6Tsv2_Fc-unsplash.jpg 400w"
+                    sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Amy, Dog Walker volunteer" width="150" height="200" />
               <h3>Amy</h3>
               <p class="story-role">Dog Walker</p>
               <blockquote>
@@ -333,7 +338,10 @@
             </li>
               
             <li class="story-card">
-              <img src="images/volunteers/tadeusz-lakota-tk5LWGNiWVs-unsplash.jpg" alt="David, Foster Carer volunteer" width="150" height="200" />
+              <img src="images/volunteers/tadeusz-lakota-tk5LWGNiWVs-unsplash.jpg" 
+                  srcset="images/volunteers/tadeusz-lakota-tk5LWGNiWVs-unsplash.jpg 800w,
+                          images/volunteers/tadeusz-lakota-tk5LWGNiWVs-unsplash.jpg 400w"
+                    sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="David, Foster Carer volunteer" width="150" height="200" />
               <h3>David</h3>
               <p class="story-role">Foster Carer</p>
               <blockquote>
@@ -343,9 +351,12 @@
                 </p>
               </blockquote>
             </li>
-
             <li class="story-card">
-              <img src="images/volunteers/james-mcdermott-_fuZknh-yFg-unsplash.jpg" alt="Zanele, Events Team volunteer" width="150" height="200" />
+              <img src="images/volunteers/james-mcdermott-_fuZknh-yFg-unsplash.jpg"
+                    srcset="images/volunteers/james-mcdermott-_fuZknh-yFg-unsplash.jpg 800w,
+                          images/volunteers/james-mcdermott-_fuZknh-yFg-unsplash.jpg 400w"
+                    sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                    alt="Zanele, Events Team volunteer" width="150" height="200" />
               <h3>Zanele</h3>
               <p class="story-role">Events Team</p>
               <blockquote>
