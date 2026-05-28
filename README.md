@@ -184,7 +184,7 @@ The navigation bar compresses and adapts at the mobile breakpoint (max-width: 60
 A hamburger toggle menu will be implemented in Part 3 using JavaScript, as noted in the CSS comments.
 
 
-### Screenshot Evidence — Responsive Design
+### Screenshot Evidence: Responsive Design
 
 **Desktop (1280px)**  
 
@@ -200,7 +200,7 @@ A hamburger toggle menu will be implemented in Part 3 using JavaScript, as noted
 
 ## Changelog
 
-### [Part 2] — May 2026
+### [Part 2]: May 2026
 
 #### Changes Based on Part 1 Feedback
 - Part 1 received a mark of 100%. No corrections or changes were required based on feedback. Development proceeded directly to Part 2 CSS styling.
