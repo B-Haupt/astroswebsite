@@ -11,8 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    
-
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>" />
   </head>
   <body>
 
@@ -20,7 +19,8 @@
     <header class="site-header">
       <div class="container header-inner">
         <a href="index.html" class="logo" aria-label="Astro's Canine Rescue – Home">
-          <img src="images/logo.png" alt="Astro's Canine Rescue logo" width="120" height="100" />
+        <img src="images/logo.png" alt="Astro's Canine Rescue logo" width="120" height="100" />
+        <span class="logo-name">Astro's Canine Rescue</span>
         </a>
         <nav class="main-nav" aria-label="Main navigation">
           <ul>
@@ -28,7 +28,7 @@
             <li><a href="about.html" aria-current="page">About</a></li>
             <li><a href="services.html">Available Dogs</a></li>
             <li><a href="enquiry.html">Volunteer</a></li>
-            <li><a href="donate.html" class="nav-donate">Donate</a></li>
+            <li><a href="donate.html">Donate</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
@@ -81,7 +81,11 @@
           <h2 id="story-heading">Our Story</h2>
           <div class="story-layout">
             <figure class="story-image">
-              <img src="images/isaac-benhesed-6TEBZsjQbEc-unsplash.jpg" alt="The founding members of Astro's Canine Rescue at the shelter in 2017" width="400" height="200" />
+              <img src="images/isaac-benhesed-6TEBZsjQbEc-unsplash.jpg" 
+                    srcset="images/isaac-benhesed-6TEBZsjQbEc-unsplash.jpg 800w,
+                            images/isaac-benhesed-6TEBZsjQbEc-unsplash.jpg 400w"
+                    sizes="(max-width: 600px) 50vw, (max-width: 900px) 50vw, 25vw"
+                    alt="The founding members of Astro's Canine Rescue at the shelter in 2017" width="400" height="200" />
               <figcaption>Our founding team in 2017 at the original Table View shelter.</figcaption>
             </figure>
             <div class="story-text">
@@ -112,25 +116,41 @@
           <ul class="team-grid" role="list">
 
             <li class="team-card">
-              <img src="images/team/karsten-winegeart-bwDnRf-r4u8-unsplash.jpg" alt="Karsten Wingeart, Founder and Director" width="200" height="250" />
+              <img src="images/team/karsten-winegeart-bwDnRf-r4u8-unsplash.jpg" 
+                   srcset="images/team/karsten-winegeart-bwDnRf-r4u8-unsplash.jpg 800w,
+                           images/team/karsten-winegeart-bwDnRf-r4u8-unsplash.jpg 400w"
+                    sizes="(max-width: 600px) 50vw, (max-width: 900px) 50vw, 25vw" 
+                    alt="Karsten Wingeart, Founder and Director" width="200" height="250" />
               <h3>Karsten Wingeart</h3>
               <p class="team-role">Founder &amp; Director</p>
             </li>
 
             <li class="team-card">
-              <img src="images/team/danny-postma-zNxOw2JFNKs-unsplash.jpg" alt="Danny Postman, Shelter Manager" width="200" height="250" />
+              <img src="images/team/danny-postma-zNxOw2JFNKs-unsplash.jpg"
+                    srcset="images/team/danny-postma-zNxOw2JFNKs-unsplash.jpg 800w,
+                            images/team/danny-postma-zNxOw2JFNKs-unsplash.jpg 400w"
+                    sizes="(max-width: 600px) 50vw, (max-width: 900px) 50vw, 25vw"
+                    alt="Danny Postman, Shelter Manager" width="200" height="250" />
               <h3>Danny Postman</h3>
               <p class="team-role">Shelter Manager</p>
             </li>
 
             <li class="team-card">
-              <img src="images/team/jake-nackos-IF9TK5Uy-KI-unsplash.jpg" alt="Priya Reddy, Volunteer Coordinator" width="200" height="250" />
+              <img src="images/team/jake-nackos-IF9TK5Uy-KI-unsplash.jpg" 
+                  srcset="images/team/jake-nackos-IF9TK5Uy-KI-unsplash.jpg 800w,
+                          images/team/jake-nackos-IF9TK5Uy-KI-unsplash.jpg 400w"
+                    sizes="(max-width: 600px) 50vw, (max-width: 900px) 50vw, 25vw" 
+                    alt="Priya Reddy, Volunteer Coordinator" width="200" height="250" />
               <h3>Priya Reddy</h3>
               <p class="team-role">Volunteer Coordinator</p>
             </li>
 
             <li class="team-card">
-              <img src="images/team/nartan-buyukyildiz-hr_feH2URs0-unsplash.jpg" alt="Nartan Buyukyildiz, Vet Liaison" width="200" height="250" />
+              <img src="images/team/nartan-buyukyildiz-hr_feH2URs0-unsplash.jpg"
+                    srcset="images/team/nartan-buyukyildiz-hr_feH2URs0-unsplash.jpg 800w,
+                            images/team/nartan-buyukyildiz-hr_feH2URs0-unsplash.jpg 400w"
+                    sizes="(max-width: 600px) 50vw, (max-width: 900px) 50vw, 25vw" 
+                    alt="Nartan Buyukyildiz, Vet Liaison" width="200" height="250" />
               <h3>Nartan Buyukyildiz</h3>
               <p class="team-role">Vet Liaison</p>
             </li>
