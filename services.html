@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>" />
   </head>
   <body>
 
@@ -18,7 +19,8 @@
     <header class="site-header">
       <div class="container header-inner">
         <a href="index.html" class="logo" aria-label="Astro's Canine Rescue – Home">
-          <img src="images/logo.png" alt="Astro's Canine Rescue logo" width="120" height="100" />
+        <img src="images/logo.png" alt="Astro's Canine Rescue logo" width="120" height="100" />
+        <span class="logo-name">Astro's Canine Rescue</span>
         </a>
         <nav class="main-nav" aria-label="Main navigation">
           <ul>
@@ -26,7 +28,7 @@
             <li><a href="about.html">About</a></li>
             <li><a href="services.html" aria-current="page">Available Dogs</a></li>
             <li><a href="enquiry.html">Volunteer</a></li>
-            <li><a href="donate.html" class="nav-donate">Donate</a></li>
+            <li><a href="donate.html">Donate</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
@@ -99,7 +101,12 @@
 
             <!-- Dog 1 -->
             <li class="dog-card" id="max" data-age="young" data-size="large" data-breed="border-collie">
-              <img src="images/baptist-standaert-mx0DEnfYxic-unsplash.jpg" alt="Max, a 2 year old male Border Collie" width="200" height="250" />
+              <img src="images/baptist-standaert-mx0DEnfYxic-unsplash.jpg"
+                    srcset="images/baptist-standaert-mx0DEnfYxic-unsplash.jpg 800w,
+                            images/baptist-standaert-mx0DEnfYxic-unsplash.jpg 400w"
+                    sizes="(max-width: 600px) 100vw,(max-width: 900px) 50vw,33vw"
+                    alt="Max, a 2 year old male Border Collie"
+                    width="200" height="250" />
               <div class="dog-card-body">
                 <h3>Max</h3>
                 <p><strong>Age:</strong> 2 years &nbsp;|&nbsp; <strong>Size:</strong> Large</p>
@@ -116,7 +123,12 @@
 
             <!-- Dog 2 -->
             <li class="dog-card" id="trixie" data-age="adult" data-size="small" data-breed="mixed">
-              <img src="images/alvan-nee-8g0D8ZfFXyA-unsplash.jpg" alt="Trixie, a 4 year old female Scottish Terrier X Yorkie" width="200" height="250" />
+              <img src="images/alvan-nee-8g0D8ZfFXyA-unsplash.jpg"
+                  srcset="images/alvan-nee-8g0D8ZfFXyA-unsplash.jpg 800w,
+                          images/alvan-nee-8g0D8ZfFXyA-unsplash.jpg 400w"
+                  sizes="(max-width: 600px) 100vw,(max-width: 900px) 50vw,33vw"
+                  alt="Trixie, a 4 year old female Scottish Terrier X Yorkie"
+                  width="200" height="250" />
               <div class="dog-card-body">
                <h3>Trixie</h3>
                 <p><strong>Age:</strong> 4 years &nbsp;|&nbsp; <strong>Size:</strong> Small</p>
@@ -133,7 +145,12 @@
 
             <!-- Dog 3 -->
             <li class="dog-card" id="diesel" data-age="senior" data-size="large" data-breed="german-shepherd">
-              <img src="images/kinshuk-bose-pkgznCMKDXo-unsplash.jpg" alt="Diesel, a 7-year-old male German Shepherd" width="200" height="250" />
+              <img src="images/kinshuk-bose-pkgznCMKDXo-unsplash.jpg"
+                  srcset="images/kinshuk-bose-pkgznCMKDXo-unsplash.jpg 800w,
+                          images/kinshuk-bose-pkgznCMKDXo-unsplash.jpg 400w"
+                  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                  alt="Diesel, a 7-year-old male German Shepherd"
+                  width="200" height="250" />
               <div class="dog-card-body">
                 <h3>Diesel</h3>
                 <p><strong>Age:</strong> 7 years &nbsp;|&nbsp; <strong>Size:</strong> Large</p>
@@ -150,7 +167,12 @@
 
             <!-- Dog 4 -->
             <li class="dog-card" id="bella" data-age="adult" data-size="large" data-breed="husky">
-              <img src="images/ash-v0_MCllHY9M-unsplash.jpg" alt="Bella, a 4-year-old female Husky" width="200" height="250" />
+             <img src="images/ash-v0_MCllHY9M-unsplash.jpg"
+                  srcset="images/ash-v0_MCllHY9M-unsplash.jpg 800w,
+                          images/ash-v0_MCllHY9M-unsplash.jpg 400w"
+                  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                  alt="Bella, a 4-year-old female Husky"
+                  width="200" height="250" />
               <div class="dog-card-body">
                 <h3>Bella</h3>
                 <p><strong>Age:</strong> 4 years &nbsp;|&nbsp; <strong>Size:</strong> Large</p>
@@ -167,7 +189,12 @@
 
             <!-- Dog 5 -->
             <li class="dog-card" id="charlie" data-age="senior" data-size="large" data-breed="golden-retriever">
-              <img src="images/victor-g-x5oPmHmY3kQ-unsplash.jpg" alt="Charlie, a 9-year-old male Golden Retriever" width="200" height="250" />
+              <img src="images/victor-g-x5oPmHmY3kQ-unsplash.jpg"
+                  srcset="images/victor-g-x5oPmHmY3kQ-unsplash.jpg 800w,
+                          images/victor-g-x5oPmHmY3kQ-unsplash.jpg 400w"
+                  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw,33vw"
+                  alt="Charlie, a 9-year-old male Golden Retriever"
+                  width="200" height="250" />
               <div class="dog-card-body">
                 <h3>Charlie</h3>
                 <p><strong>Age:</strong> 9 years &nbsp;|&nbsp; <strong>Size:</strong> Large</p>
@@ -184,7 +211,12 @@
 
             <!-- Dog 6 -->
             <li class="dog-card" id="sky" data-age="young" data-size="medium" data-breed="appenzeller-sennenhund">
-              <img src="images/nathalie-ehrnleitner-SApQiu5GIdQ-unsplash.jpg" alt="Sky, a 2-year-old female  Appenzeller Sennenhund" width="200" height="250" />
+             <img src="images/nathalie-ehrnleitner-SApQiu5GIdQ-unsplash.jpg"
+                srcset="images/nathalie-ehrnleitner-SApQiu5GIdQ-unsplash.jpg 800w,
+                        images/nathalie-ehrnleitner-SApQiu5GIdQ-unsplash.jpg 400w"
+                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                alt="Sky, a 2-year-old female Appenzeller Sennenhund"
+                width="200" height="250" />
               <div class="dog-card-body">
                 <h3>Sky</h3>
                 <p><strong>Age:</strong> 2 years &nbsp;|&nbsp; <strong>Size:</strong> Medium</p>
@@ -201,7 +233,12 @@
 
              <!-- Dog 7 -->
             <li class="dog-card" id="teddy" data-age="young" data-size="medium" data-breed="mixed">
-              <img src="images/brooke-cagle-Ntm4C2lCWxQ-unsplash.jpg" alt="Teddy, a 2-year-old male  Goldendoodle" width="200" height="250" />
+              <img src="images/brooke-cagle-Ntm4C2lCWxQ-unsplash.jpg"
+                  srcset="images/brooke-cagle-Ntm4C2lCWxQ-unsplash.jpg 800w,
+                          images/brooke-cagle-Ntm4C2lCWxQ-unsplash.jpg 400w"
+                  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                  alt="Teddy, a 2-year-old male Goldendoodle"
+                  width="200" height="250" />
               <div class="dog-card-body">
                 <h3>Teddy</h3>
                 <p><strong>Age:</strong> 2 years &nbsp;|&nbsp; <strong>Size:</strong> Medium</p>
@@ -218,7 +255,12 @@
 
             <!-- Dog 8 -->
             <li class="dog-card" id="ghost" data-age="senior" data-size="large" data-breed="mixed">
-              <img src="images/cristofer-maximilian-5_nJw3UUgpQ-unsplash.jpg" alt="Ghost, a 9-year-old male Weimaraner" width="200" height="250" />
+              <img src="images/cristofer-maximilian-5_nJw3UUgpQ-unsplash.jpg"
+                  srcset="images/cristofer-maximilian-5_nJw3UUgpQ-unsplash.jpg 800w,
+                          images/cristofer-maximilian-5_nJw3UUgpQ-unsplash.jpg 400w"
+                  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                  alt="Ghost, a 9-year-old male Weimaraner"
+                  width="200" height="250" />
               <div class="dog-card-body">
                 <h3>Ghost</h3>
                 <p><strong>Age:</strong> 9 years &nbsp;|&nbsp; <strong>Size:</strong> Large</p>
@@ -235,7 +277,14 @@
 
             <!-- Dog 9 -->
             <li class="dog-card" id="luke" data-age="adult" data-size="small" data-breed="mixed">
-              <img src="images/karsten-winegeart-Qb7D1xw28Co-unsplash.jpg" alt="Luke, a 4 year old female Shih Tzu" width="200" height="250" />
+             <img src="images/karsten-winegeart-Qb7D1xw28Co-unsplash.jpg"
+                  srcset="images/karsten-winegeart-Qb7D1xw28Co-unsplash.jpg 800w,
+                          images/karsten-winegeart-Qb7D1xw28Co-unsplash.jpg 400w"
+                  sizes="(max-width: 600px) 100vw,
+                          (max-width: 900px) 50vw,
+                          33vw"
+                  alt="Luke, a 4 year old male Shih Tzu"
+                  width="200" height="250" />
               <div class="dog-card-body">
                <h3>Luke</h3>
                 <p><strong>Age:</strong> 4 years &nbsp;|&nbsp; <strong>Size:</strong> Small</p>
