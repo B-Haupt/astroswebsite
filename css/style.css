@@ -120,6 +120,11 @@ video {
   max-width: 100%;
   height: auto;
 }
+/* Exclude Leaflet's own tile/marker images from the global img reset */
+.leaflet-container img {
+  max-width: none;
+  height: auto;
+}
 
 a {
   color: var(--colour-primary);
@@ -650,6 +655,11 @@ section {
   outline-offset: 3px;
 }
 
+.btn-favourite.is-favourited {
+  color: var(--colour-danger);
+  border-color: var(--colour-danger);
+  background-color: rgba(179,42,30,0.06);
+}
 
 /* Homepage Section Below */
 
@@ -1040,6 +1050,19 @@ section {
   border-color: var(--colour-primary);
 }
 
+/* Greyed-out Prev / Next when at the first or last page */
+.pagination button[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Override button default appearance to match the existing link styling */
+.pagination button.btn-outline {
+  font-family: var(--font-body);
+  background: transparent;
+}
+
 /* --- Adoption Process Steps --- */
 .adoption-process {
   background-color: var(--colour-bg-alt);
@@ -1140,6 +1163,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-md);
+  align-items: start;
 }
 
 .faq-item {
@@ -1644,7 +1668,6 @@ section {
   width: 100%;
   height: 450px;
   border-radius: var(--radius-lg);
-  overflow: hidden;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--colour-border);
 }
@@ -2159,12 +2182,6 @@ select:hover {
     padding-block: var(--space-md);
   }
 
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-sm);
-  }
-
   .main-nav ul {
     flex-wrap: wrap;
     gap: var(--space-xs);
@@ -2332,3 +2349,369 @@ select:hover {
     font-size: 10pt;
   }
 }
+
+ /* Part 3 - Style for Javascript components */
+
+/* The toggle button — hidden on desktop, shown on mobile */
+.nav-toggle {
+  display:         none;
+  flex-direction:  column;
+  justify-content: center;
+  align-items:     center;
+  gap:             5px;
+  background:      transparent;
+  border:          none;
+  padding:         var(--space-sm);
+  cursor:          pointer;
+  z-index:         200;
+}
+
+/* Each of the three bars */
+.hamburger-bar {
+  display:          block;
+  width:            26px;
+  height:           2px;
+  background-color: var(--colour-primary);
+  border-radius:    var(--radius-full);
+  transition:       transform var(--transition-base),
+                    opacity   var(--transition-base);
+}
+
+/* Animate the bars into an X when the nav is open */
+.nav-toggle.is-active .hamburger-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.is-active .hamburger-bar:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.is-active .hamburger-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Show the button and collapse the nav on small screens */
+@media (max-width: 600px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  /* Hide the nav by default on mobile */
+  .main-nav {
+    display:          none;
+    position:         absolute;
+    top:              100%;
+    left:             0;
+    right:            0;
+    background-color: var(--colour-primary-dark);
+    padding:          var(--space-md) 0;
+    box-shadow:       var(--shadow-md);
+    z-index:          150;
+  }
+
+  /* Show the nav when the .is-open class is added via JS */
+  .main-nav.is-open {
+    display: block;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap:            0;
+  }
+
+  .main-nav a {
+    display:   block;
+    padding:   var(--space-md) var(--space-xl);
+    width:     100%;
+    color:     var(--colour-white);
+    font-size: var(--fs-lg);
+  }
+
+  .main-nav a:hover,
+  .main-nav a:focus-visible,
+  .main-nav a[aria-current="page"] {
+    color:               var(--colour-accent);
+    border-bottom-color: var(--colour-accent);
+  }
+}
+
+/* Ensure the header wrapper is position:relative for the dropdown */
+.header-inner {
+  position: relative;
+}
+
+
+  /* PHOTO GALLERY GRID  (about.html) */
+.gallery-section {
+  padding:    var(--space-3xl) 0;
+  background: var(--colour-bg-alt);
+}
+
+.gallery-grid {
+  display:               grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:                   var(--space-md);
+  list-style:            none;
+  padding:               0;
+  margin:                var(--space-xl) 0 0;
+}
+
+.gallery-item {
+  border-radius: var(--radius-md);
+  overflow:      hidden;
+  aspect-ratio:  4 / 3;
+  position:      relative;
+}
+
+.gallery-item img {
+  width:      100%;
+  height:     100%;
+  object-fit: cover;
+  display:    block;
+  transition: transform var(--transition-slow), filter var(--transition-slow);
+}
+
+/* Zoom and darken on hover to hint that the image is clickable */
+.gallery-item:hover img,
+.gallery-item:focus img {
+  transform: scale(1.05);
+  filter:    brightness(0.85);
+}
+
+.gallery-item:focus {
+  outline:        3px solid var(--colour-primary);
+  outline-offset: 3px;
+}
+
+/* Camera icon overlay on hover */
+.gallery-item::after {
+  content:     '\f030';           /* Font Awesome fa-camera unicode */
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position:    absolute;
+  top:         50%;
+  left:        50%;
+  transform:   translate(-50%, -50%);
+  color:       var(--colour-white);
+  font-size:   var(--fs-xl);
+  opacity:     0;
+  transition:  opacity var(--transition-base);
+  pointer-events: none;
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Lightbox overlay  */
+.lightbox-overlay {
+  position:         fixed;
+  inset:            0;
+  background-color: rgba(0, 0, 0, 0.92);
+  display:          none;       /* hidden by default */
+  align-items:      center;
+  justify-content:  center;
+  z-index:          1000;
+  padding:          var(--space-xl);
+}
+
+/* The image + caption wrapper */
+.lightbox-content {
+  max-width:  90vw;
+  max-height: 85vh;
+  display:    flex;
+  flex-direction: column;
+  align-items:    center;
+  gap:        var(--space-sm);
+}
+
+.lightbox-content img {
+  max-width:    90vw;
+  max-height:   78vh;
+  object-fit:   contain;
+  border-radius: var(--radius-md);
+  box-shadow:   var(--shadow-lg);
+  display:      block;
+}
+
+.lightbox-caption {
+  color:       var(--colour-bg);
+  font-size:   var(--fs-sm);
+  text-align:  center;
+  margin:      0;
+  opacity:     0.85;
+}
+
+/* Close, Prev and Next buttons */
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position:         fixed;
+  background:       rgba(255,255,255,0.12);
+  color:            var(--colour-white);
+  border:           none;
+  border-radius:    var(--radius-full);
+  width:            3rem;
+  height:           3rem;
+  display:          flex;
+  align-items:      center;
+  justify-content:  center;
+  font-size:        var(--fs-md);
+  cursor:           pointer;
+  transition:       background var(--transition-fast);
+  z-index:          1001;
+}
+
+.lightbox-close {
+  top:   var(--space-lg);
+  right: var(--space-lg);
+}
+
+.lightbox-prev {
+  left:    var(--space-md);
+  top:     50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-next {
+  right:   var(--space-md);
+  top:     50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(255,255,255,0.28);
+}
+
+.lightbox-close:focus-visible,
+.lightbox-prev:focus-visible,
+.lightbox-next:focus-visible {
+  outline:        3px solid var(--colour-white);
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  .lightbox-prev { left:  var(--space-xs); }
+  .lightbox-next { right: var(--space-xs); }
+}
+
+/* Leaflet Map Styles  */
+/* Remove the empty square that Leaflet creates for our div icon */
+.paw-marker {
+  background: transparent !important;
+  border:     none        !important;
+}
+
+/* Form Validation - Error message and field states  */
+
+/* Red border on invalid fields */
+.field-error {
+  border-color: var(--colour-danger) !important;
+  box-shadow:   0 0 0 3px rgba(179, 42, 30, 0.15) !important;
+}
+
+/* Inline error text below the field */
+.error-message {
+  display:    block;
+  color:      var(--colour-danger);
+  font-size:  var(--fs-sm);
+  margin-top: var(--space-xs);
+  font-style: italic;
+}
+
+/* Error attached to a checkbox/radio fieldset */
+.fieldset-error {
+  margin-top: var(--space-sm);
+  display:    block;
+}
+
+/* "No dogs match" message on services.html */
+.no-results-msg {
+  text-align:  center;
+  color:       var(--colour-text-muted);
+  font-size:   var(--fs-md);
+  padding:     var(--space-xl) 0;
+  width:       100%;
+  grid-column: 1 / -1;
+}
+
+ /* Form Success / Process Response Box  */
+.form-success-box {
+  background:    var(--colour-primary-light);
+  border:        2px solid var(--colour-primary);
+  border-radius: var(--radius-lg);
+  padding:       var(--space-2xl);
+  margin-top:    var(--space-xl);
+  animation:     fadeSlideIn 0.4s ease both;
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Large green tick icon */
+.success-icon {
+  font-size:  3rem;
+  color:      var(--colour-primary);
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
+
+/* Heading inside the response */
+.form-success-box h3 {
+  color:       var(--colour-primary-dark);
+  text-align:  center;
+  font-size:   var(--fs-xl);
+  margin-bottom: var(--space-md);
+}
+
+/* Summary box inside the response */
+.response-summary,
+.response-next-steps {
+  background:    var(--colour-white);
+  border-radius: var(--radius-md);
+  padding:       var(--space-lg);
+  margin:        var(--space-lg) 0;
+}
+
+.response-summary h4,
+.response-next-steps h4 {
+  font-size:     var(--fs-md);
+  color:         var(--colour-primary-dark);
+  margin-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--colour-border);
+  padding-bottom: var(--space-xs);
+}
+
+.response-summary p,
+.response-next-steps li {
+  font-size:   var(--fs-base);
+  color:       var(--colour-text);
+  line-height: var(--lh-normal);
+  margin-bottom: var(--space-xs);
+}
+
+.response-next-steps ol {
+  padding-left: var(--space-lg);
+}
+
+.response-footer {
+  text-align:  center;
+  color:       var(--colour-text-muted);
+  font-size:   var(--fs-sm);
+  margin-top:  var(--space-lg);
+}
+
