@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Contact Astro's Canine Rescue in Table View, Cape Town. Get in touch, find us on the map or report a stray." />
+    <meta name="keywords" content="contact Astro's Canine Rescue, dog shelter address Table View, Cape Town rescue phone number, animal welfare contact Cape Town, dog rescue location map" />
     <title>Contact | Astro's Canine Rescue</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>" />
     <!-- Leaflet.js CSS for interactive map -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   </head>
   <body>
 
@@ -24,7 +25,12 @@
         <img src="images/logo.png" alt="Astro's Canine Rescue logo" width="120" height="100" />
         <span class="logo-name">Astro's Canine Rescue</span>
         </a>
-        <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+        <nav class="main-nav" id="main-nav" aria-label="Main navigation">
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -80,7 +86,7 @@
               <div>
                 <h3>Address</h3>
                 <address>
-                  123 Blaauwberg Road<br/>
+                  223 Blaauwberg Road<br/>
                   Table View <br/>
                   Cape Town, 7441 <br /> 
                   OR <br />
@@ -225,7 +231,7 @@
             id="shelter-map"
             class="map-container"
             role="application"
-            aria-label="Interactive map showing the location of Astro's Canine Rescue at 123 Blaauwberg Road, Table View, Cape Town, 7441 
+            aria-label="Interactive map showing the location of Astro's Canine Rescue at 223 Blaauwberg Road, Table View, Cape Town, 7441 
             OR 89 Janssens Avenue, Table View, Cape Town, 7441"
             style="height: 450px;"
           >
@@ -341,7 +347,7 @@
           <p>
             <a href="mailto:info@astrocanine.org">info@astrocanine.org</a><br />
             <a href="tel:+27215551234">(021) 555-1234</a><br />
-            123 Blaauwberg Road, Table View, Cape Town, 7441 
+            223 Blaauwberg Road, Table View, Cape Town, 7441 
             OR 89 Janssens Avenue, Table View, Cape Town, 7441
           </p>
         </address>
@@ -374,7 +380,7 @@
     </footer>
 
     <!-- Leaflet.js for interactive map -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN/WLEo=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
