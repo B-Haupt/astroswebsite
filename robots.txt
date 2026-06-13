@@ -1,0 +1,13 @@
+# robots.txt — Astro's Canine Rescue
+# Instructs search engine crawlers which pages to index.
+# https://www.robotstxt.org/
+
+# Allow all well-behaved crawlers to index the full site
+User-agent: *
+Allow: /
+
+# Disallow crawling of the images folder (not useful as standalone pages)
+Disallow: /images/
+
+# Point crawlers to the sitemap
+Sitemap: https://astroscaninerescue.netlify.app/sitemap.xml
