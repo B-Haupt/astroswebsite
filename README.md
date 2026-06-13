@@ -5,7 +5,7 @@
 |---|---|
 | Student Name | Brittany Marie Haupt |
 | Student Number | ST10500773 |
-| Module | Web Development (Introduction) — WEDE5020/p/w |
+| Module | Web Development (Introduction)- WEDE5020/p/w |
 | Academic Year | 2026 |
 
 ---
@@ -60,23 +60,26 @@ This repository contains the source code for the **Astro's Canine Rescue** websi
 |---|---|---|
 | Part 1: HTML structure & project proposals | Week 2 |  Complete |
 | Part 2: CSS styling & responsive design | Week 6 |  Completed |
-| Part 3: JavaScript, forms & SEO | Week 10 |  Pending |
-| Final review & testing | Week 11 |  Pending |
-| PoE submission | Week 12 | Pending |
+| Part 3: JavaScript, forms & SEO | Week 10 |  Completed |
+| Final review & testing | Week 11 |  Completed |
+| PoE submission | Week 12 | Completed |
 
 ---
 
 ## Part 1 Details
 
-### File and Folder Structure
+### File and Folder Structure Part 1 - 3
 ```
 astroswebsite/
-├── index.html          # Homepage — hero, impact stats, featured animals
-├── about.html          # About Us — history, mission, vision, team
-├── services.html       # Adoptions — animal listings, adoption process, fees
+├── index.html          # Homepage- hero, impact stats, featured animals
+├── about.html          # About Us- history, mission, vision, team
+├── services.html       # Adoptions- animal listings, adoption process, fees
 ├── enquiry.html        # Volunteer form
-├── donate.html         # Donate — donation and wish list section
-├── contact.html        # Contact — shelter details, maps, general message form
+├── donate.html         # Donate- donation and wish list section
+├── contact.html        # Contact- shelter details, maps, general message form
+├── README.md           # Details website changes
+├── robots.txt          # Instruct search engine crawlers
+├── sitemap.xml         # For search engines understand the website structure
 ├── css/
 │   └── style.css       # External stylesheet (styled in Part 2)
 ├── js/
@@ -122,11 +125,11 @@ The website uses a flat navigation structure where all six pages are accessible 
   • Hero banner  • Mission   • Filter      • Why vol. • Impact   • Contact info
   • Dog cards    • Our story • Dog list.   • Require. • Donate   • Message form
   • Our mission  • The team  • Adopt steps • Apply    • EFT      • Leaflet map
-  • Impact stats • Values    • FAQs        • Form     • Wish list • FAQs
+  • Impact stats • Values    • FAQs        • Form     • Wish list• FAQs
   • Get involved • Partners                • Stories             • Emergency
 
 ┌─────────────────────────────────────────────────────────────────┐
-│       Shared Footer — Quick Links · Contact · Social Media      │
+│       Shared Footer - Quick Links · Contact · Social Media      │
 └─────────────────────────────────────────────────────────────────┘
 ```
 You can find a image of the sitemap inside the folder Sitemap in the Research and Content folder that was submitted.
@@ -141,7 +144,7 @@ The external stylesheet (`css/style.css`) is organised into 21 clearly commented
 
 | Section | Purpose |
 |---|---|
-| 1. CSS Custom Properties | Design tokens — colours, fonts, spacing, shadows, breakpoints |
+| 1. CSS Custom Properties | Design tokens - colours, fonts, spacing, shadows, breakpoints |
 | 2. CSS Reset / Normalisation | Removes browser default inconsistencies using box-sizing, margin, padding reset |
 | 3. Typography | Heading hierarchy (h1–h4), body text, blockquotes, line-height, letter-spacing |
 | 4. Layout Utilities | `.container`, `.two-col`, section spacing, `.section-subtext` |
@@ -159,8 +162,8 @@ The external stylesheet (`css/style.css`) is organised into 21 clearly commented
 | 16. Forms | Global fieldset, legend, input, textarea, select, checkbox and radio styles |
 | 17. Footer | Three-column footer grid, social icons, footer bottom bar |
 | 18. Pseudo-classes | :hover, :focus-visible, :active, :checked, :invalid, :valid, :disabled |
-| 19. Responsive — Tablet | max-width: 900px — two-column grids, compact nav, reflow |
-| 20. Responsive — Mobile | max-width: 600px — single-column, stacked nav, full-width buttons |
+| 19. Responsive- Tablet | max-width: 900px- two-column grids, compact nav, reflow |
+| 20. Responsive- Mobile | max-width: 600px- single-column, stacked nav, full-width buttons |
 | 21. Print Styles | Hides nav/footer/buttons, shows link URLs |
 
 ### Design Tokens Used
@@ -175,7 +178,7 @@ The external stylesheet (`css/style.css`) is organised into 21 clearly commented
 ### Responsive Breakpoints
 | Breakpoint | Width | Key Changes |
 |---|---|---|
-| Desktop | > 900px | Full layouts — 3-4 column grids |
+| Desktop | > 900px | Full layouts - 3-4 column grids |
 | Tablet | ≤ 900px | 2-column grids, compact nav, stacked contact layout |
 | Mobile | ≤ 600px | Single-column, stacked nav, full-width buttons, scaled typography |
 
@@ -198,8 +201,120 @@ A hamburger toggle menu will be implemented in Part 3 using JavaScript, as noted
 
 ---
 
+## Part 3 Details
+
+### JavaScript Features Implemented
+
+| Feature | File | Description |
+|---|---|---|
+| Hamburger nav toggle | `js/script.js` | Three-bar button animates to X; toggles `.is-open` on `.main-nav` on mobile |
+| FAQ accordion | `js/script.js` | All `.faq-toggle` buttons across the site toggle their `<dd>` answers and flip the plus/minus icon |
+| Dog search and filter | `js/script.js` | Real-time filter on `services.html` by name, age, size and breed; displays a "no results" message when no dogs match |
+| Leaflet interactive map | `js/script.js` | Two paw-print markers on an OpenStreetMap tile layer for both shelter locations; popups show address and phone number |
+| Photo gallery lightbox | `js/script.js` | Nine gallery images on `about.html`; clicking opens a full-screen overlay with prev/next navigation and keyboard support (Escape, ArrowLeft, ArrowRight) |
+| Enquiry form validation | `js/script.js` | Validates all fields (required, email format, phone format, checkbox groups); on success shows a personalised response with volunteer name, selected roles, availability and estimated orientation date |
+| Contact form validation + mailto | `js/script.js` | Validates all fields; on success compiles a `mailto:` link pre-filled with the user's details and opens the default mail client |
+
+### SEO Implemented
+
+| Page | Title Tag | Meta Description | Meta Keywords |
+|---|---|---|---|
+| index.html | Home \| Astro's Canine Rescue | Yes | Yes |
+| about.html | About \| Astro's Canine Rescue | Yes | Yes |
+| services.html | Available Dogs \| Astro's Canine Rescue | Yes | Yes |
+| enquiry.html | Volunteer \| Astro's Canine Rescue | Yes | Yes |
+| donate.html | Donate \| Astro's Canine Rescue | Yes | Yes |
+| contact.html | Contact \| Astro's Canine Rescue | Yes | Yes |
+
+Additional SEO:
+- `robots.txt` created- allows all crawlers, disallows `/images/`, links to sitemap
+- `sitemap.xml` created- lists all six pages with last-modified dates, change frequency and priority scores
+- All images have descriptive file names and meaningful `alt` attributes (implemented in Part 1 and maintained)
+- Internal linking used throughout (every page links to related pages via nav and in-body CTAs)
+- Clean URL structure (descriptive filenames: `services.html`, `enquiry.html`, etc.)
+
+### Deployment
+
+- Platform: Netlify
+- Live URL: https://astroscaninerescue.netlify.app/
+
+---
+
+
+
 ## Changelog
 
+### [Part 3]: June 2026
+
+#### Changes Based on Part 2 Feedback
+- Part 2 received a mark of 100%. No corrections or changes were required based on feedback. Development proceeded directly to Part 3 (JavaScript, Forms & SEO).
+
+#### JavaScript - Hamburger Navigation Toggle
+- Added `.nav-toggle` button HTML to all six pages inside the `.header-inner` div.
+- Script toggles `.is-open` on `.main-nav` and `.is-active` on the button.
+- Click-outside handler closes the nav automatically.
+- Nav closes when any link is clicked (single-page navigation behaviour).
+- 
+#### JavaScript - Favourite (Heart) Toggle
+- Added a click handler for every `.btn-favourite` button on `services.html`.
+- Toggles the heart icon between `fa-regular` (outline) and `fa-solid` (filled), and adds an `is-favourited` class for the red colour treatment.
+- Updates `aria-pressed` and `aria-label` (e.g. "Add Max to favourites" / "Remove Max from favourites") for screen readers.
+  
+#### JavaScript - FAQ Accordion
+- Wired up all `.faq-toggle` buttons across `services.html` and `contact.html`.
+- Clicking a button reveals/hides the associated `<dd>` answer via `aria-controls`.
+- Icon rotates 45° via CSS when expanded, visually turning the plus into an X.
+
+#### JavaScript - Dog Search and Filter
+- Connected the four filter controls on `services.html` (`#search-name`, `#filter-age`, `#filter-size`, `#filter-breed`) to the dog listing grid.
+- Filters run on every `input`/`change` event and hide non-matching `.dog-card` elements.
+- A "no results" message is injected and shown when zero cards match.
+
+#### JavaScript - Leaflet Interactive Map
+- Initialised Leaflet.js map in `contact.html` centred on Table View, Cape Town.
+- Two custom paw-print markers added for 223 Blaauwberg Road and 89 Janssens Avenue.
+- Each marker has a popup showing the address and phone number.
+- Uses OpenStreetMap tiles (free, no API key required).
+
+#### JavaScript - Photo Gallery Lightbox
+- Added nine-image gallery section to `about.html` using all existing dog photos.
+- Lightbox overlay built dynamically by JS; opened by clicking any `.gallery-item`.
+- Prev/next navigation buttons and keyboard support (Escape, ArrowLeft, ArrowRight).
+- Camera icon overlay on hover signals that images are interactive.
+
+#### JavaScript - Enquiry Form Validation and Response
+- Full client-side validation on `#enquiry-form`: required fields, email format, SA phone format, at least one interest and availability checkbox.
+- Inline error messages with `role="alert"` display beneath each invalid field.
+- On success, the form is hidden and a personalised response card is shown with the volunteer's name, selected roles, availability and estimated orientation date.
+
+#### JavaScript - Contact Form Validation and Mailto
+- Full client-side validation on `#contact-form`: required fields, email format, optional phone format, minimum message length.
+- On success, a pre-filled `mailto:` link opens the user's default mail client addressed to `info@astrocanine.org`.
+- Confirmation message shown after the mailto is triggered.
+
+#### SEO - Meta Keywords
+- Added `<meta name="keywords">` to all six pages with page-specific keyword lists.
+
+#### SEO - robots.txt
+- Created `robots.txt` at root; allows all crawlers, disallows `/images/`, references sitemap.
+
+#### SEO - sitemap.xml
+- Created `sitemap.xml` listing all six pages with `lastmod`, `changefreq` and `priority`.
+
+#### CSS - Part 3 Additions
+- Added hamburger button styles (three bars animate to X via CSS transforms).
+- Added mobile nav dropdown styles (`.main-nav.is-open`).
+- Added `.gallery-section` and `.gallery-grid` layout styles.
+- Added `.gallery-item` hover effect (zoom, darken, camera icon overlay).
+- Added `.lightbox-overlay`, `.lightbox-content`, `.lightbox-close/prev/next` styles.
+- Added `.error-message`, `.field-error`, `.fieldset-error` validation styles.
+- Added `.form-success-box`, `.response-summary`, `.response-next-steps` response card styles.
+- Added `.no-results-msg` style for the dog filter empty state.
+- Added `.paw-marker` Leaflet custom icon fix.
+- Fixed hamburger icon colour (`--colour-white` to `--colour-primary`) so it's visible against the white header.
+- Updated mobile dropdown link styling: white text at `--fs-lg`, with `--colour-accent` for hover/focus/current-page states.
+- Removed the obsolete pre-hamburger `.header-inner` column layout so the logo and hamburger sit on the same row on mobile.
+- 
 ### [Part 2]: May 2026
 
 #### Changes Based on Part 1 Feedback
@@ -229,13 +344,13 @@ A hamburger toggle menu will be implemented in Part 3 using JavaScript, as noted
 - Applied `background-color` alternation across page sections (ivory, alt-ivory, primary green, sand) to create visual rhythm.
 
 #### Pseudo-classes Applied
-- `:hover` — card lift effect (`transform: translateY`), button colour deepening, nav underline, link colour change, filter bar border highlight, dog image zoom, social icon background fill.
-- `:focus-visible` — green outline with offset applied to all interactive elements (buttons, links, inputs, checkboxes, radio buttons) for keyboard and screen reader accessibility.
-- `:active` — button `transform: translateY(0)` to cancel the hover lift, giving tactile click feedback.
-- `:checked` — amount radio buttons styled as filled green pill labels when selected (using the hidden `<input>` + adjacent sibling `<label>` pattern).
-- `:invalid` and `:valid` — red/green border feedback on form inputs after the user has interacted (`:not(:placeholder-shown)` guard prevents styling on empty untouched fields).
-- `:disabled` — greyed-out background and `not-allowed` cursor on disabled form controls.
-- `[aria-current="page"]` — green underline on the active navigation link.
+- `:hover`- card lift effect (`transform: translateY`), button colour deepening, nav underline, link colour change, filter bar border highlight, dog image zoom, social icon background fill.
+- `:focus-visible`- green outline with offset applied to all interactive elements (buttons, links, inputs, checkboxes, radio buttons) for keyboard and screen reader accessibility.
+- `:active`- button `transform: translateY(0)` to cancel the hover lift, giving tactile click feedback.
+- `:checked`- amount radio buttons styled as filled green pill labels when selected (using the hidden `<input>` + adjacent sibling `<label>` pattern).
+- `:invalid` and `:valid`- red/green border feedback on form inputs after the user has interacted (`:not(:placeholder-shown)` guard prevents styling on empty untouched fields).
+- `:disabled`- greyed-out background and `not-allowed` cursor on disabled form controls.
+- `[aria-current="page"]`- green underline on the active navigation link.
 
 #### Sticky Navigation
 - Applied `position: sticky; top: 0; z-index: 100` to `.site-header` so the navigation bar remains fixed at the top of the viewport as the user scrolls.
@@ -265,7 +380,7 @@ A hamburger toggle menu will be implemented in Part 3 using JavaScript, as noted
 - Section padding reduced via CSS custom property override.
 
 
-### [Part 1] - April 2026
+### [Part 1]: April 2026
 
 #### Initial Commit
 - Created public GitHub repository and initialised with README.md.
@@ -289,82 +404,53 @@ A hamburger toggle menu will be implemented in Part 3 using JavaScript, as noted
 
 ---
 
-## References
+## References [Updated includes Part 1 - 3]
 
-Afrihost, 2024. *Domain registration pricing*. [Online] Available at: <https://www.afrihost.com/domains> [Accessed 15 March 2025].
-
-Animal Welfare Society of South Africa, 2024. *AWSSA official website*. [Online] Available at: <https://www.awssa.org.za> [Accessed 20 March 2025].
-
-Benhesed, I., 2026. *Rescue shelter founding image*. [Online] Unsplash. Available at: <https://unsplash.com/> [Accessed 18 April 2026].
-
-Bose, K., 2026. *German Shepherd dog portrait*. [Online] Unsplash. Available at: <https://unsplash.com/> [Accessed 18 April 2026].
-
-Buyukyildiz, N., 2026. *Vet liaison portrait*. [Online] Unsplash. Available at: <https://unsplash.com/> [Accessed 18 April 2026].
-
-Cagle, B., 2026. *Goldendoodle dog portrait*. [Online] Unsplash. Available at: <https://unsplash.com/> [Accessed 18 April 2026].
-
-Cape Town SPCA, 2024. *Cape Town SPCA official website*. [Online] Available at: <https://www.spca-ct.co.za> [Accessed 20 March 2025].
-
-CSS-Tricks, 2024. *A complete guide to CSS Grid*. [Online] Available at: <https://css-tricks.com/snippets/css/complete-guide-grid/> [Accessed 1 May 2026].
-
-CSS-Tricks, 2024. *A complete guide to Flexbox*. [Online] Available at: <https://css-tricks.com/snippets/css/a-guide-to-flexbox/> [Accessed 1 May 2026].
-
-Ehrnleitner, N., 2026. *Appenzeller Sennenhund dog portrait*. [Online] Unsplash. Available at: <https://unsplash.com/> [Accessed 18 April 2026].
-
-Font Awesome, 2026. *Font Awesome Free Icons*. [Online] Available at: <https://fontawesome.com/> [Accessed 18 April 2026].
-
-GitHub, 2024. *GitHub Pages documentation*. [Online] Available at: <https://docs.github.com/en/pages> [Accessed 15 March 2025].
-
-Google Fonts, 2026. *Merriweather and Source Sans 3*. [Online] Available at: <https://fonts.google.com/> [Accessed 18 April 2026].
-
-Lakota, T., 2026. *Male volunteer portrait (David)*. [Online] Unsplash. Available at: <https://unsplash.com/> [Accessed 18 April 2026].
-
-Leaflet.js, 2026. *Leaflet interactive maps*. [Online] Available at: <https://leafletjs.com/> [Accessed 18 April 2026].
-
-Maura, T., 2026. *Female volunteer portrait (Amy)*. [Online] Unsplash. Available at: <https://unsplash.com/> [Accessed 18 April 2026].
-
-Maximilian, C., 2026. *Weimaraner dog portrait*. [Online] Unsplash. Available at: <https://unsplash.com/> [Accessed 18 April 2026].
-
-McDermott, J., 2026. *Events volunteer portrait (Zanele)*. [Online] Unsplash. Available at: <https://unsplash.com/> [Accessed 18 April 2026].
-
-MDN Web Docs, 2024. *CSS custom properties (variables)*. [Online] Available at: <https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties> [Accessed 1 May 2026].
-
-MDN Web Docs, 2024. *CSS Grid Layout*. [Online] Available at: <https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout> [Accessed 1 May 2026].
-
-MDN Web Docs, 2024. *CSS Flexbox*. [Online] Available at: <https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox> [Accessed 1 May 2026].
-
-MDN Web Docs, 2024. *Responsive design*. [Online] Available at: <https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design> [Accessed 1 May 2026].
-
-MDN Web Docs, 2024. *Using media queries*. [Online] Available at: <https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries> [Accessed 1 May 2026].
-
-MDN Web Docs, 2024. *HTML forms guide*. [Online] Available at: <https://developer.mozilla.org/en-US/docs/Learn/Forms> [Accessed 15 March 2025].
-
-Nackos, J., 2026. *Volunteer coordinator portrait*. [Online] Unsplash. Available at: <https://unsplash.com/> [Accessed 18 April 2026].
-
-Nee, A., 2026. *Scottish Terrier X Yorkie dog portrait*. [Online] Unsplash. Available at: <https://unsplash.com/> [Accessed 18 April 2026].
-
-Postma, D., 2026. *Shelter manager portrait*. [Online] Unsplash. Available at: <https://unsplash.com/> [Accessed 18 April 2026].
-
-Republic of South Africa, 1997. *Non-Profit Organisations Act 71 of 1997*. Pretoria: Government Printer.
-
-Standaert, B., 2026. *Border Collie dog portrait*. [Online] Unsplash. Available at: <https://unsplash.com/> [Accessed 18 April 2026].
-
-TEARS Animal Rescue, 2024. *TEARS official website*. [Online] Available at: <https://www.tears.org.za> [Accessed 20 March 2025].
-
-Unsplash contributor, 2026. *Golden Retriever dog portrait*. [Online] Unsplash. Available at: <https://unsplash.com/> [Accessed 18 April 2026].
-
-Unsplash contributor, 2026. *Husky dog portrait*. [Online] Unsplash. Available at: <https://unsplash.com/> [Accessed 18 April 2026].
-
-Unsplash contributor, 2026. *Rescued dog looking hopefully at the camera*. [Online] Unsplash. Available at: <https://unsplash.com/> [Accessed 18 April 2026].
-
-W3C, 2023. *Web Content Accessibility Guidelines (WCAG) 2.1*. [Online] Available at: <https://www.w3.org/TR/WCAG21> [Accessed 15 March 2025].
-
-W3Schools, 2024. *CSS :hover selector*. [Online] Available at: <https://www.w3schools.com/cssref/sel_hover.php> [Accessed 1 May 2026].
-
-W3Schools, 2024. *CSS media queries*. [Online] Available at: <https://www.w3schools.com/css/css_rwd_mediaqueries.asp> [Accessed 1 May 2026].
-
-W3Schools, 2024. *HTML semantic elements*. [Online] Available at: <https://www.w3schools.com/html/html5_semantic_elements.asp> [Accessed 15 March 2025].
-
-Winegeart, K., 2026. *Shih Tzu dog portrait*. [Online] Unsplash. Available at: <https://unsplash.com/> [Accessed 18 April 2026].
-
-Winegeart, K., 2026. *Founder team at shelter*. [Online] Unsplash. Available at: <https://unsplash.com/> [Accessed 18 April 2026].
+Afrihost, 2024. Domain registration pricing. [Online] Available at: https://www.afrihost.com/domains [Accessed 15 March 2025].
+Animal Welfare Society of South Africa, 2024. AWSSA official website. [Online] Available at: https://www.awssa.org.za [Accessed 20 March 2025].
+Benhesed, I., 2026. Rescue shelter founding image. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+Bose, K., 2026. German Shepherd dog portrait. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+Buyukyildiz, N., 2026. Vet liaison portrait. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+Cagle, B., 2026. Goldendoodle dog portrait. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+Cape Town SPCA, 2024. Cape Town SPCA official website. [Online] Available at: https://www.spca-ct.co.za [Accessed 20 March 2025].
+CSS-Tricks, 2024. A complete guide to CSS Grid. [Online] Available at: https://css-tricks.com/snippets/css/complete-guide-grid/ [Accessed 1 May 2026].
+CSS-Tricks, 2024. A complete guide to Flexbox. [Online] Available at: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ [Accessed 1 May 2026].
+Ehrnleitner, N., 2026. Appenzeller Sennenhund dog portrait. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+Font Awesome, 2026. Font Awesome Free Icons. [Online] Available at: https://fontawesome.com/ [Accessed 18 April 2026].
+GitHub, 2024. GitHub Pages documentation. [Online] Available at: https://docs.github.com/en/pages [Accessed 15 March 2025].
+Google Fonts, 2026. Merriweather and Source Sans 3. [Online] Available at: https://fonts.google.com/ [Accessed 18 April 2026].
+Lakota, T., 2026. Male volunteer portrait (David). [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+Leaflet.js, 2026. Leaflet interactive maps. [Online] Available at: https://leafletjs.com/ [Accessed 11 June 2026].
+Maura, T., 2026. Female volunteer portrait (Amy). [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+Maximilian, C., 2026. Weimaraner dog portrait. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+McDermott, J., 2026. Events volunteer portrait (Zanele). [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+MDN Web Docs, 2024. ARIA: dialog role. [Online] Available at: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role [Accessed 11 June 2026].
+MDN Web Docs, 2024. CSS custom properties (variables). [Online] Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties [Accessed 1 May 2026].
+MDN Web Docs, 2024. CSS Flexbox. [Online] Available at: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox [Accessed 1 May 2026].
+MDN Web Docs, 2024. CSS Grid Layout. [Online] Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout [Accessed 1 May 2026].
+MDN Web Docs, 2024. EventTarget: addEventListener() method. [Online] Available at: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener [Accessed 11 June 2026].
+MDN Web Docs, 2024. HTMLElement: dataset property. [Online] Available at: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset [Accessed 11 June 2026].
+MDN Web Docs, 2024. HTML forms guide. [Online] Available at: https://developer.mozilla.org/en-US/docs/Learn/Forms [Accessed 15 March 2025].
+MDN Web Docs, 2024. Responsive design. [Online] Available at: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design [Accessed 1 May 2026].
+MDN Web Docs, 2024. Using media queries. [Online] Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries [Accessed 1 May 2026].
+MDN Web Docs, 2024. Window: location property. [Online] Available at: https://developer.mozilla.org/en-US/docs/Web/API/Window/location [Accessed 11 June 2026].
+Nackos, J., 2026. Volunteer coordinator portrait. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+Nee, A., 2026. Scottish Terrier X Yorkie dog portrait. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+OpenStreetMap, 2026. OpenStreetMap tile layer. [Online] Available at: https://www.openstreetmap.org/ [Accessed 11 June 2026].
+Postma, D., 2026. Shelter manager portrait. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+Republic of South Africa, 1997. Non-Profit Organisations Act 71 of 1997. Pretoria: Government Printer.
+Robots.txt, 2024. Robots.txt specification. [Online] Available at: https://www.robotstxt.org/ [Accessed 11 June 2026].
+Sitemaps.org, 2024. Sitemap XML format. [Online] Available at: https://www.sitemaps.org/protocol.html [Accessed 11 June 2026].
+Standaert, B., 2026. Border Collie dog portrait. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+TEARS Animal Rescue, 2024. TEARS official website. [Online] Available at: https://www.tears.org.za [Accessed 20 March 2025].
+Unsplash contributor, 2026. Golden Retriever dog portrait. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+Unsplash contributor, 2026. Husky dog portrait. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+Unsplash contributor, 2026. Rescued dog looking hopefully at the camera. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+W3C, 2023. Web Content Accessibility Guidelines (WCAG) 2.1. [Online] Available at: https://www.w3.org/TR/WCAG21 [Accessed 15 March 2025].
+W3Schools, 2024. CSS :hover selector. [Online] Available at: https://www.w3schools.com/cssref/sel_hover.php [Accessed 1 May 2026].
+W3Schools, 2024. CSS media queries. [Online] Available at: https://www.w3schools.com/css/css_rwd_mediaqueries.asp [Accessed 1 May 2026].
+W3Schools, 2024. HTML semantic elements. [Online] Available at: https://www.w3schools.com/html/html5_semantic_elements.asp [Accessed 15 March 2025].
+W3Schools, 2024. JavaScript form validation. [Online] Available at: https://www.w3schools.com/js/js_validation.asp [Accessed 11 June 2026].
+W3Schools, 2024. JavaScript regular expressions. [Online] Available at: https://www.w3schools.com/js/js_regexp.asp [Accessed 11 June 2026].
+Winegeart, K., 2026. Founder team at shelter. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+Winegeart, K., 2026. Shih Tzu dog portrait. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
