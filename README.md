@@ -403,54 +403,100 @@ Additional SEO:
 - Created `images/` directory with sub-folder for volunteers and team. All dog pictures are in the main images folder.
 
 ---
-
 ## References [Updated includes Part 1 - 3]
 
 Afrihost, 2024. Domain registration pricing. [Online] Available at: https://www.afrihost.com/domains [Accessed 15 March 2025].
+
 Animal Welfare Society of South Africa, 2024. AWSSA official website. [Online] Available at: https://www.awssa.org.za [Accessed 20 March 2025].
+
 Benhesed, I., 2026. Rescue shelter founding image. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+
 Bose, K., 2026. German Shepherd dog portrait. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+
 Buyukyildiz, N., 2026. Vet liaison portrait. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+
 Cagle, B., 2026. Goldendoodle dog portrait. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+
 Cape Town SPCA, 2024. Cape Town SPCA official website. [Online] Available at: https://www.spca-ct.co.za [Accessed 20 March 2025].
+
 CSS-Tricks, 2024. A complete guide to CSS Grid. [Online] Available at: https://css-tricks.com/snippets/css/complete-guide-grid/ [Accessed 1 May 2026].
+
 CSS-Tricks, 2024. A complete guide to Flexbox. [Online] Available at: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ [Accessed 1 May 2026].
+
 Ehrnleitner, N., 2026. Appenzeller Sennenhund dog portrait. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+
 Font Awesome, 2026. Font Awesome Free Icons. [Online] Available at: https://fontawesome.com/ [Accessed 18 April 2026].
+
 GitHub, 2024. GitHub Pages documentation. [Online] Available at: https://docs.github.com/en/pages [Accessed 15 March 2025].
+
 Google Fonts, 2026. Merriweather and Source Sans 3. [Online] Available at: https://fonts.google.com/ [Accessed 18 April 2026].
+
 Lakota, T., 2026. Male volunteer portrait (David). [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+
 Leaflet.js, 2026. Leaflet interactive maps. [Online] Available at: https://leafletjs.com/ [Accessed 11 June 2026].
+
 Maura, T., 2026. Female volunteer portrait (Amy). [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+
 Maximilian, C., 2026. Weimaraner dog portrait. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+
 McDermott, J., 2026. Events volunteer portrait (Zanele). [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+
 MDN Web Docs, 2024. ARIA: dialog role. [Online] Available at: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role [Accessed 11 June 2026].
+
 MDN Web Docs, 2024. CSS custom properties (variables). [Online] Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties [Accessed 1 May 2026].
+
 MDN Web Docs, 2024. CSS Flexbox. [Online] Available at: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox [Accessed 1 May 2026].
+
 MDN Web Docs, 2024. CSS Grid Layout. [Online] Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout [Accessed 1 May 2026].
+
 MDN Web Docs, 2024. EventTarget: addEventListener() method. [Online] Available at: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener [Accessed 11 June 2026].
+
 MDN Web Docs, 2024. HTMLElement: dataset property. [Online] Available at: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset [Accessed 11 June 2026].
+
 MDN Web Docs, 2024. HTML forms guide. [Online] Available at: https://developer.mozilla.org/en-US/docs/Learn/Forms [Accessed 15 March 2025].
+
 MDN Web Docs, 2024. Responsive design. [Online] Available at: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design [Accessed 1 May 2026].
+
 MDN Web Docs, 2024. Using media queries. [Online] Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries [Accessed 1 May 2026].
+
 MDN Web Docs, 2024. Window: location property. [Online] Available at: https://developer.mozilla.org/en-US/docs/Web/API/Window/location [Accessed 11 June 2026].
+
 Nackos, J., 2026. Volunteer coordinator portrait. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+
 Nee, A., 2026. Scottish Terrier X Yorkie dog portrait. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+
 OpenStreetMap, 2026. OpenStreetMap tile layer. [Online] Available at: https://www.openstreetmap.org/ [Accessed 11 June 2026].
+
 Postma, D., 2026. Shelter manager portrait. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+
 Republic of South Africa, 1997. Non-Profit Organisations Act 71 of 1997. Pretoria: Government Printer.
+
 Robots.txt, 2024. Robots.txt specification. [Online] Available at: https://www.robotstxt.org/ [Accessed 11 June 2026].
+
 Sitemaps.org, 2024. Sitemap XML format. [Online] Available at: https://www.sitemaps.org/protocol.html [Accessed 11 June 2026].
+
 Standaert, B., 2026. Border Collie dog portrait. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+
 TEARS Animal Rescue, 2024. TEARS official website. [Online] Available at: https://www.tears.org.za [Accessed 20 March 2025].
+
 Unsplash contributor, 2026. Golden Retriever dog portrait. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+
 Unsplash contributor, 2026. Husky dog portrait. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+
 Unsplash contributor, 2026. Rescued dog looking hopefully at the camera. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+
 W3C, 2023. Web Content Accessibility Guidelines (WCAG) 2.1. [Online] Available at: https://www.w3.org/TR/WCAG21 [Accessed 15 March 2025].
+
 W3Schools, 2024. CSS :hover selector. [Online] Available at: https://www.w3schools.com/cssref/sel_hover.php [Accessed 1 May 2026].
+
 W3Schools, 2024. CSS media queries. [Online] Available at: https://www.w3schools.com/css/css_rwd_mediaqueries.asp [Accessed 1 May 2026].
+
 W3Schools, 2024. HTML semantic elements. [Online] Available at: https://www.w3schools.com/html/html5_semantic_elements.asp [Accessed 15 March 2025].
+
 W3Schools, 2024. JavaScript form validation. [Online] Available at: https://www.w3schools.com/js/js_validation.asp [Accessed 11 June 2026].
+
 W3Schools, 2024. JavaScript regular expressions. [Online] Available at: https://www.w3schools.com/js/js_regexp.asp [Accessed 11 June 2026].
+
 Winegeart, K., 2026. Founder team at shelter. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
+
 Winegeart, K., 2026. Shih Tzu dog portrait. [Online] Unsplash. Available at: https://unsplash.com/ [Accessed 18 April 2026].
