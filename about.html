@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Learn about Astro's Canine Rescue – our story, mission, vision, team, values and partners." />
+    <meta name="keywords" content="about Astro's Canine Rescue, dog rescue history Cape Town, animal welfare NPO South Africa, rescue shelter team Table View, Cape Town dog NPO mission" />
     <title>About | Astro's Canine Rescue</title>
     <!-- Links for font's, icons and styles sheets are below -->
     <link rel="stylesheet" href="css/style.css" />
@@ -22,7 +23,12 @@
         <img src="images/logo.png" alt="Astro's Canine Rescue logo" width="120" height="100" />
         <span class="logo-name">Astro's Canine Rescue</span>
         </a>
-        <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+        <nav class="main-nav" id="main-nav" aria-label="Main navigation">
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html" aria-current="page">About</a></li>
@@ -254,6 +260,43 @@
           </ul>
         </div>
       </section>
+
+        <!-- ===== Photo Gallery - Part 3: Lightbox ===== -->
+      <section class="gallery-section" aria-labelledby="gallery-heading">
+        <div class="container">
+          <h2 id="gallery-heading">Shelter Gallery</h2>
+          <p class="section-subtext">A glimpse into life at Astro's Canine Rescue. Click any photo to view it full size.</p>
+          <ul class="gallery-grid" role="list" aria-label="Photo gallery">
+            <li class="gallery-item">
+              <img src="images/baptist-standaert-mx0DEnfYxic-unsplash.jpg" alt="Max the Border Collie enjoying time in the shelter yard" data-caption="Max - Border Collie, 2 years" width="400" height="300" />
+            </li>
+            <li class="gallery-item">
+              <img src="images/alvan-nee-8g0D8ZfFXyA-unsplash.jpg" alt="Trixie the Scottish Terrier X Yorkie resting in a sunny spot" data-caption="Trixie - Scottish Terrier X Yorkie, 4 years" width="400" height="300" />
+            </li>
+            <li class="gallery-item">
+              <img src="images/kinshuk-bose-pkgznCMKDXo-unsplash.jpg" alt="Diesel the German Shepherd sitting patiently at the shelter" data-caption="Diesel - German Shepherd, 7 years" width="400" height="300" />
+            </li>
+            <li class="gallery-item">
+              <img src="images/ash-v0_MCllHY9M-unsplash.jpg" alt="Bella the Husky with bright blue eyes looking at the camera" data-caption="Bella - Husky, 4 years" width="400" height="300" />
+            </li>
+            <li class="gallery-item">
+              <img src="images/victor-g-x5oPmHmY3kQ-unsplash.jpg" alt="Charlie the Golden Retriever relaxing in the afternoon sun" data-caption="Charlie - Golden Retriever, 9 years" width="400" height="300" />
+            </li>
+            <li class="gallery-item">
+              <img src="images/nathalie-ehrnleitner-SApQiu5GIdQ-unsplash.jpg" alt="Sky the Appenzeller Sennenhund ready for an adventure" data-caption="Sky - Appenzeller Sennenhund, 2 years" width="400" height="300" />
+            </li>
+            <li class="gallery-item">
+              <img src="images/brooke-cagle-Ntm4C2lCWxQ-unsplash.jpg" alt="Teddy the Goldendoodle playing fetch in the shelter garden" data-caption="Teddy - Goldendoodle, 2 years" width="400" height="300" />
+            </li>
+            <li class="gallery-item">
+              <img src="images/cristofer-maximilian-5_nJw3UUgpQ-unsplash.jpg" alt="Ghost the Weimaraner stretching after a long run" data-caption="Ghost - Weimaraner, 9 years" width="400" height="300" />
+            </li>
+            <li class="gallery-item">
+              <img src="images/karsten-winegeart-Qb7D1xw28Co-unsplash.jpg" alt="Luke the Shih Tzu sitting nicely and waiting for a treat" data-caption="Luke- Shih Tzu, 4 years" width="400" height="300" />
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
 
     <!-- ===== Footer ===== -->
@@ -276,7 +319,7 @@
           <p>
             <a href="mailto:info@astrocanine.org">info@astrocanine.org</a><br />
             <a href="tel:+27215551234">(021) 555-1234</a><br />
-            123 Blaauwberg Road, Table View, Cape Town, 7441 
+            223 Blaauwberg Road, Table View, Cape Town, 7441 
             OR 89 Janssens Avenue, Table View, Cape Town, 7441
           </p>
         </address>
