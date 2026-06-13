@@ -314,7 +314,7 @@ Additional SEO:
 - Fixed hamburger icon colour (`--colour-white` to `--colour-primary`) so it's visible against the white header.
 - Updated mobile dropdown link styling: white text at `--fs-lg`, with `--colour-accent` for hover/focus/current-page states.
 - Removed the obsolete pre-hamburger `.header-inner` column layout so the logo and hamburger sit on the same row on mobile.
-- 
+  
 ### [Part 2]: May 2026
 
 #### Changes Based on Part 1 Feedback
